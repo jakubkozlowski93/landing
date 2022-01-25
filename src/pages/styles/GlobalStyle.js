@@ -2,21 +2,19 @@ import { createGlobalStyle } from 'styled-components'
 
 const GlobalStyle = createGlobalStyle`
 
-
 html {
     box-sizing: border-box;
-    
+   
   }
   
-  *, *::after, *::before {
+*, *::after, *::before {
     box-sizing: inherit;
     font-family: 'Poppins', sans-serif;
   }
   
-  body {
+body {
     margin: 0;
     padding: 0;
-
   }
 `
 

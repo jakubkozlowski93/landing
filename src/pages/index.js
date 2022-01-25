@@ -1,12 +1,14 @@
 import React from 'react'
+import GlobalStyle from './styles/GlobalStyle'
 import styled from 'styled-components'
 
-const Wrapper = styled.div`
-  background-color: red;
-`
-
 const Home = () => {
-  return <Wrapper>Witam</Wrapper>
+  return (
+    <>
+      <GlobalStyle />
+      Witam
+    </>
+  )
 }
 
 export default Home
