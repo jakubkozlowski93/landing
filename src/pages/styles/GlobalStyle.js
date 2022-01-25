@@ -4,6 +4,7 @@ const GlobalStyle = createGlobalStyle`
 
 html {
     box-sizing: border-box;
+    font-size: 16px;
    
   }
   
@@ -15,6 +16,7 @@ html {
 body {
     margin: 0;
     padding: 0;
+    background-color: rgb(243, 243, 243);
   }
 `
 
