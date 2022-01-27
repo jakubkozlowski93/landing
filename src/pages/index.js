@@ -8,12 +8,13 @@ import { motion } from 'framer-motion'
 import FacebookIcon from './../../assets/icons/FacebookIcon.svg'
 import LinkedInIcon from './../../assets/icons/LinkedInIcon.svg'
 import InstagramIcon from './../../assets/icons/InstagramIcon.svg'
+import HeroSection from '../components/organisms/HeroSection/HeroSection'
 
 const Container = styled.div`
   height: 100vh;
   height: calc(var(--vh, 1vh) * 100);
   width: 100%;
-  padding: 30px 50px;
+  padding: 30px 50px 40px 50px;
   overflow: hidden;
   display: grid;
   grid-template-rows: 50px 1fr 50px;
@@ -57,7 +58,6 @@ const Footer = styled.footer`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-bottom: 20px;
 
   ul {
     list-style-type: none;
@@ -105,7 +105,7 @@ const Home = () => {
         )}
 
         {isOpen ? (
-          `null`
+          <HeroSection />
         ) : (
           <motion.div initial={{ y: '100vh' }} animate={{ y: 0 }} transition={{ type: 'spring', stiffness: 60, delay: 0.2 }}>
             <Footer>
