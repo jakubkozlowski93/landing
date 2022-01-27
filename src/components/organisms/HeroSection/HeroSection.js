@@ -36,10 +36,13 @@ const HeroSection = () => {
       <motion.div initial={{ x: '100vh' }} animate={{ x: 0 }} transition={{ type: 'spring', stiffness: 60, delay: 0.5 }}>
         <StyledTitle small>CREATE YOUR OWN STYLE</StyledTitle>
       </motion.div>
-      <StyledInfo>
-        A style for every story, get the latest style here at an inexpensive price.
-        <br /> <br />A style for every story, get the latest style.
-      </StyledInfo>
+      <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ ease: 'easeOut', duration: 2 }}>
+        <StyledInfo>
+          A style for every story, get the latest style here at an inexpensive price.
+          <br /> <br />A style for every story, get the latest style.
+        </StyledInfo>
+      </motion.div>
+
       <motion.div>
         <img src={input} />
       </motion.div>
