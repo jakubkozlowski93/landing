@@ -9,7 +9,10 @@ import { motion } from 'framer-motion'
 const Container = styled.div`
   width: 100%;
   padding: 30px 50px;
-  height: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
 `
 
 const Header = styled.nav`
@@ -17,15 +20,31 @@ const Header = styled.nav`
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  height: 100%;
+  height: 50px;
 `
 
 const HamburgerButton = styled.div`
-  height: 100%;
   cursor: pointer;
 `
 
-const Menu = styled.ul``
+const Menu = styled.ul`
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+
+  li {
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 120%;
+    letter-spacing: -0.03em;
+    color: #242635;
+    text-transform: capitalize;
+    padding: 20px;
+    cursor: pointer;
+  }
+`
 
 const Home = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -50,12 +69,14 @@ const Home = () => {
           </HamburgerButton>
         </Header>
         {isOpen ? null : (
-          <Menu>
-            <li>o mnie</li>
-            <li>usługi</li>
-            <li>realizacje</li>
-            <li>kontakt</li>
-          </Menu>
+          <motion.div initial={{ x: '100vh' }} animate={{ x: 0 }} transition={{ type: 'spring', stiffness: 60 }}>
+            <Menu>
+              <li>o mnie</li>
+              <li>usługi</li>
+              <li>realizacje</li>
+              <li>kontakt</li>
+            </Menu>
+          </motion.div>
         )}
       </Container>
     </>
