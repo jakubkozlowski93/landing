@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import { StyledLogo } from './../components/atoms/Logo/Logo'
 import ClosedMenuIcon from './../../assets/icons/ClosedMenuIcon.svg'
 import OpenedMenuIcon from './../../assets/icons/OpenedMenuIcon.svg'
+import { motion } from 'framer-motion'
 
 const Container = styled.div`
   width: 100%;
@@ -14,7 +15,12 @@ const Container = styled.div`
 const Header = styled.nav`
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 100%;
+  height: 100%;
+`
+
+const HamburgerButton = styled.div`
   height: 100%;
 `
 
@@ -22,6 +28,7 @@ const Menu = styled.ul``
 
 const Home = () => {
   const [isOpen, setIsOpen] = useState(false)
+  console.log(motion)
   return (
     <>
       <GlobalStyle />
@@ -29,9 +36,9 @@ const Home = () => {
         <Header>
           <StyledLogo>logo.</StyledLogo>
 
-          <div onClick={() => setIsOpen(!isOpen)}>
+          <HamburgerButton onClick={() => setIsOpen(!isOpen)}>
             <img src={isOpen ? OpenedMenuIcon : ClosedMenuIcon} />
-          </div>
+          </HamburgerButton>
         </Header>
         {isOpen ? null : (
           <Menu>
