@@ -11,7 +11,7 @@ import InstagramIcon from './../../assets/icons/InstagramIcon.svg'
 
 const Container = styled.div`
   width: 100%;
-  padding: 0px 50px;
+  padding: 30px 50px 0 50px;
   height: 100vh;
   overflow: hidden;
   display: grid;
@@ -24,7 +24,6 @@ const Header = styled.nav`
   align-items: center;
   width: 100%;
   height: 50px;
-  margin-top: 30px;
 `
 
 const HamburgerButton = styled.div`
@@ -36,10 +35,9 @@ const Menu = styled.ul`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
   height: 100%;
-  width: 100%;
-  text-align: center;
+  margin: 0;
+  padding: 0;
 
   li {
     font-weight: 500;
@@ -48,17 +46,17 @@ const Menu = styled.ul`
     letter-spacing: -0.03em;
     color: #242635;
     text-transform: capitalize;
-    padding: 20px;
+    padding: 20px 0;
     cursor: pointer;
-    width: 100%;
+    text-align: center;
   }
 `
 
 const Footer = styled.footer`
-  width: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 
   ul {
     list-style-type: none;
@@ -66,6 +64,8 @@ const Footer = styled.footer`
 
     li {
       padding: 0 20px;
+      width: 100%;
+      color: #242635;
     }
   }
 `
@@ -103,7 +103,9 @@ const Home = () => {
           </motion.div>
         )}
 
-        {isOpen ? null : (
+        {isOpen ? (
+          `null`
+        ) : (
           <motion.div initial={{ y: '100vh' }} animate={{ y: 0 }} transition={{ type: 'spring', stiffness: 60, delay: 0.2 }}>
             <Footer>
               <ul>
