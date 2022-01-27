@@ -14,8 +14,8 @@ const Container = styled.div`
   padding: 30px 50px;
   height: 100vh;
   overflow: hidden;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-rows: 50px 1fr 50px;
 `
 
 const Header = styled.nav`
@@ -101,19 +101,23 @@ const Home = () => {
           </motion.div>
         )}
 
-        <Footer>
-          <ul>
-            <li>
-              <img src={FacebookIcon} alt="Facebook icon" />
-            </li>
-            <li>
-              <img src={LinkedInIcon} alt="LinkedIn icon" />
-            </li>
-            <li>
-              <img src={InstagramIcon} alt="Instagram Icon" />
-            </li>
-          </ul>
-        </Footer>
+        {isOpen ? null : (
+          <motion.div initial={{ y: '100vh' }} animate={{ y: 0 }} transition={{ type: 'spring', stiffness: 60, delay: 0.2 }}>
+            <Footer>
+              <ul>
+                <li>
+                  <img src={FacebookIcon} alt="Facebook icon" />
+                </li>
+                <li>
+                  <img src={LinkedInIcon} alt="LinkedIn icon" />
+                </li>
+                <li>
+                  <img src={InstagramIcon} alt="Instagram Icon" />
+                </li>
+              </ul>
+            </Footer>
+          </motion.div>
+        )}
       </Container>
     </>
   )
