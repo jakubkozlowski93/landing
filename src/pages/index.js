@@ -10,9 +10,10 @@ import LinkedInIcon from './../../assets/icons/LinkedInIcon.svg'
 import InstagramIcon from './../../assets/icons/InstagramIcon.svg'
 
 const Container = styled.div`
-  width: 100%;
-  padding: 30px 50px 0 50px;
   height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
+  width: 100%;
+  padding: 30px 50px;
   overflow: hidden;
   display: grid;
   grid-template-rows: 50px 1fr 50px;
