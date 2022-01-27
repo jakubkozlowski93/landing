@@ -11,7 +11,7 @@ import InstagramIcon from './../../assets/icons/InstagramIcon.svg'
 
 const Container = styled.div`
   width: 100%;
-  padding: 30px 50px;
+  padding: 0px 50px;
   height: 100vh;
   overflow: hidden;
   display: grid;
@@ -24,6 +24,7 @@ const Header = styled.nav`
   align-items: center;
   width: 100%;
   height: 50px;
+  margin-top: 30px;
 `
 
 const HamburgerButton = styled.div`
@@ -57,6 +58,7 @@ const Footer = styled.footer`
   width: 100%;
   display: flex;
   justify-content: center;
+  margin-bottom: 30px;
 
   ul {
     list-style-type: none;
