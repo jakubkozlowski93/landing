@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkgatsby_starter_hello_world=self.webpackChunkgatsby_starter_hello_world||[]).push([[162],{9771:function(e,r,o){o.r(r);var t=(0,o(9692).createGlobalStyle)(["html{box-sizing:border-box;font-size:16px;}*,*::after,*::before{box-sizing:inherit;font-family:'Poppins',sans-serif;}body{margin:0;padding:0;background-color:rgb(243,243,243);}"]);r.default=t}}]);
+//# sourceMappingURL=component---src-pages-styles-global-style-js-70e21b23013d331e6773.js.map
