@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkgatsby_starter_hello_world=self.webpackChunkgatsby_starter_hello_world||[]).push([[162],{9771:function(e,r,t){t.r(r);var o=(0,t(9692).createGlobalStyle)(["html{box-sizing:border-box;font-size:16px;height:100%}*,*::after,*::before{box-sizing:inherit;font-family:'Poppins',sans-serif;}body{margin:0;padding:0;background-color:rgb(243,243,243);height:100%;}"]);r.default=o}}]);
+//# sourceMappingURL=component---src-pages-styles-global-style-js-33ce07648512b9fe25dd.js.map
