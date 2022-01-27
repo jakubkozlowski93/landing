@@ -22,13 +22,14 @@ const Header = styled.nav`
 
 const HamburgerButton = styled.div`
   height: 100%;
+  cursor: pointer;
 `
 
 const Menu = styled.ul``
 
 const Home = () => {
   const [isOpen, setIsOpen] = useState(false)
-  console.log(motion)
+
   return (
     <>
       <GlobalStyle />
@@ -37,7 +38,15 @@ const Home = () => {
           <StyledLogo>logo.</StyledLogo>
 
           <HamburgerButton onClick={() => setIsOpen(!isOpen)}>
-            <img src={isOpen ? OpenedMenuIcon : ClosedMenuIcon} />
+            {isOpen ? (
+              <motion.div whileHover={{ scale: 1.1 }}>
+                <img src={OpenedMenuIcon} />
+              </motion.div>
+            ) : (
+              <motion.div whileHover={{ scale: 1.1 }}>
+                <img src={ClosedMenuIcon} />
+              </motion.div>
+            )}
           </HamburgerButton>
         </Header>
         {isOpen ? null : (
