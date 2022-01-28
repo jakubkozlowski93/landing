@@ -6,8 +6,7 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  margin-top: 70px;
+  margin-top: 90px;
 `
 
 const StyledTitle = styled.h1`
