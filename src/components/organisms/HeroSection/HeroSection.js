@@ -33,7 +33,7 @@ const StyledInput = styled.form`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 20px;
+  padding: 0 10px 0 20px;
 
   input[type='text'] {
     outline: none;
@@ -78,7 +78,7 @@ const HeroSection = () => {
         </StyledInfo>
 
         <StyledInput>
-          <input type="text" placeholder="Enter your email" autoFocus />
+          <input type="text" placeholder="Enter your email" />
           <input type="button" value="Get Started" />
         </StyledInput>
       </motion.div>
