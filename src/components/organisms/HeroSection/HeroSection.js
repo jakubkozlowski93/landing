@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import input from './../../../../assets/icons/input.png'
 import { motion } from 'framer-motion'
 
 const Wrapper = styled.div`
@@ -26,6 +25,42 @@ const StyledInfo = styled.p`
   margin: 40px 10px;
 `
 
+const StyledInput = styled.form`
+  background: #dbe5f4;
+  border-radius: 100px;
+  width: 280px;
+  height: 45px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+
+  input[type='text'] {
+    outline: none;
+    border: none;
+    font-size: 14px;
+    line-height: 21px;
+    background: inherit;
+    width: 140px;
+    opacity: 0.6;
+  }
+
+  input[type='button'] {
+    cursor: pointer;
+    background: #0061fe;
+    width: 85px;
+    height: 35px;
+    color: #f3f3f3;
+    border: none;
+    border-radius: 100px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 15px;
+    letter-spacing: 0.5px;
+  }
+`
+
 const HeroSection = () => {
   return (
     <Wrapper>
@@ -36,15 +71,16 @@ const HeroSection = () => {
       <motion.div initial={{ x: '100vh' }} animate={{ x: 0 }} transition={{ type: 'spring', stiffness: 60, delay: 0.5 }}>
         <StyledTitle small>CREATE YOUR OWN STYLE</StyledTitle>
       </motion.div>
-      <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ ease: 'easeOut', duration: 2 }}>
+      <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ ease: 'easeIn', duration: 2, delay: 0.6 }}>
         <StyledInfo>
           A style for every story, get the latest style here at an inexpensive price.
           <br /> <br />A style for every story, get the latest style.
         </StyledInfo>
-      </motion.div>
 
-      <motion.div>
-        <img src={input} />
+        <StyledInput>
+          <input type="text" placeholder="Enter your email" autoFocus />
+          <input type="button" value="Get Started" />
+        </StyledInput>
       </motion.div>
     </Wrapper>
   )
