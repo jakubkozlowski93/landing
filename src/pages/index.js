@@ -8,6 +8,7 @@ import { motion } from 'framer-motion'
 import Footer from './../components/organisms/Footer/Footer'
 import HeroSection from '../components/organisms/HeroSection/HeroSection'
 import Bar from './../components/atoms/Bar/Bar'
+import Menu from './../components/organisms/Menu/Menu'
 
 const Container = styled.div`
   height: 100vh;
@@ -29,28 +30,6 @@ const Header = styled.nav`
 
 const HamburgerButton = styled.div`
   cursor: pointer;
-`
-
-const Menu = styled.ul`
-  list-style-type: none;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-
-  li {
-    font-weight: 500;
-    font-size: 32px;
-    line-height: 120%;
-    letter-spacing: -0.03em;
-    color: #242635;
-    text-transform: capitalize;
-    padding: 20px 0;
-    cursor: pointer;
-    text-align: center;
-  }
 `
 
 const Home = () => {
@@ -77,12 +56,7 @@ const Home = () => {
         </Header>
         {isOpen ? null : (
           <motion.div initial={{ x: '100vh' }} animate={{ x: 0 }} transition={{ type: 'spring', stiffness: 60 }}>
-            <Menu>
-              <li>o mnie</li>
-              <li>usługi</li>
-              <li>realizacje</li>
-              <li>kontakt</li>
-            </Menu>
+            <Menu />
           </motion.div>
         )}
         {isOpen ? (
