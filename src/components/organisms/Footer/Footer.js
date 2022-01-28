@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import FacebookIcon from './../../../assets/icons/FacebookIcon.svg'
 import LinkedInIcon from './../../../assets/icons/LinkedInIcon.svg'
 import InstagramIcon from './../../../assets/icons/InstagramIcon.svg'
+import { motion } from 'framer-motion'
 
 const Wrapper = styled.footer`
   display: flex;
@@ -23,19 +24,21 @@ const Wrapper = styled.footer`
 
 const Footer = () => {
   return (
-    <Wrapper>
-      <ul>
-        <li>
-          <img src={FacebookIcon} alt="Facebook icon" />
-        </li>
-        <li>
-          <img src={LinkedInIcon} alt="LinkedIn icon" />
-        </li>
-        <li>
-          <img src={InstagramIcon} alt="Instagram Icon" />
-        </li>
-      </ul>
-    </Wrapper>
+    <motion.div initial={{ y: '100vh' }} animate={{ y: 0 }} transition={{ type: 'spring', stiffness: 60, delay: 0.2 }}>
+      <Wrapper>
+        <ul>
+          <li>
+            <img src={FacebookIcon} alt="Facebook icon" />
+          </li>
+          <li>
+            <img src={LinkedInIcon} alt="LinkedIn icon" />
+          </li>
+          <li>
+            <img src={InstagramIcon} alt="Instagram Icon" />
+          </li>
+        </ul>
+      </Wrapper>
+    </motion.div>
   )
 }
 
