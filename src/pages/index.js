@@ -2,12 +2,10 @@ import React, { useState } from 'react'
 import GlobalStyle from './styles/GlobalStyle'
 import styled from 'styled-components'
 import { StyledLogo } from './../components/atoms/Logo/Logo'
-import ClosedMenuIcon from './../../assets/icons/ClosedMenuIcon.svg'
-import OpenedMenuIcon from './../../assets/icons/OpenedMenuIcon.svg'
+import ClosedMenuIcon from './../assets/icons/ClosedMenuIcon.svg'
+import OpenedMenuIcon from './../assets/icons/OpenedMenuIcon.svg'
 import { motion } from 'framer-motion'
-import FacebookIcon from './../../assets/icons/FacebookIcon.svg'
-import LinkedInIcon from './../../assets/icons/LinkedInIcon.svg'
-import InstagramIcon from './../../assets/icons/InstagramIcon.svg'
+import Footer from './../components/organisms/Footer/Footer'
 import HeroSection from '../components/organisms/HeroSection/HeroSection'
 import Bar from './../components/atoms/Bar/Bar'
 
@@ -52,23 +50,6 @@ const Menu = styled.ul`
     padding: 20px 0;
     cursor: pointer;
     text-align: center;
-  }
-`
-
-const Footer = styled.footer`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-
-  ul {
-    list-style-type: none;
-    display: flex;
-
-    li {
-      padding: 0 20px;
-      width: 100%;
-      color: #242635;
-    }
   }
 `
 
@@ -120,19 +101,7 @@ const Home = () => {
           </>
         ) : (
           <motion.div initial={{ y: '100vh' }} animate={{ y: 0 }} transition={{ type: 'spring', stiffness: 60, delay: 0.2 }}>
-            <Footer>
-              <ul>
-                <li>
-                  <img src={FacebookIcon} alt="Facebook icon" />
-                </li>
-                <li>
-                  <img src={LinkedInIcon} alt="LinkedIn icon" />
-                </li>
-                <li>
-                  <img src={InstagramIcon} alt="Instagram Icon" />
-                </li>
-              </ul>
-            </Footer>
+            <Footer />
           </motion.div>
         )}
       </Container>
