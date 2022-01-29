@@ -1,10 +1,7 @@
 import React, { useState } from 'react'
 import GlobalStyle from './styles/GlobalStyle'
 import styled from 'styled-components'
-import { StyledLogo } from './../components/atoms/Logo/Logo'
-import ClosedMenuIcon from './../assets/icons/ClosedMenuIcon.svg'
-import OpenedMenuIcon from './../assets/icons/OpenedMenuIcon.svg'
-import { motion } from 'framer-motion'
+import Header from '../components/organisms/Header/Header'
 import Footer from './../components/organisms/Footer/Footer'
 import HeroSection from '../components/organisms/HeroSection/HeroSection'
 import Bar from './../components/atoms/Bar/Bar'
@@ -20,42 +17,18 @@ const Container = styled.div`
   grid-template-rows: 50px 1fr 50px; */
 `
 
-const Header = styled.nav`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  height: 50px;
-  position: fixed;
-  padding: 50px 50px 40px 50px;
-`
-
-const HamburgerButton = styled.div`
-  cursor: pointer;
-`
-
 const Home = () => {
   const [isOpen, setIsOpen] = useState(false)
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen)
+  }
 
   return (
     <>
       <GlobalStyle />
 
-      <Header>
-        <StyledLogo>logo.</StyledLogo>
-
-        <HamburgerButton onClick={() => setIsOpen(!isOpen)}>
-          {isOpen ? (
-            <motion.div whileHover={{ scale: 1.1 }}>
-              <img src={OpenedMenuIcon} alt="Opened menu icon" />
-            </motion.div>
-          ) : (
-            <motion.div whileHover={{ scale: 1.1 }}>
-              <img src={ClosedMenuIcon} alt="Closed neby icon" />
-            </motion.div>
-          )}
-        </HamburgerButton>
-      </Header>
+      <Header isOpen={isOpen} toggleMenu={toggleMenu} />
 
       <Container>
         {isOpen ? null : <Menu />}
