@@ -11,6 +11,7 @@ const Wrapper = styled.div`
   margin-top: 90px;
   justify-content: center;
   align-items: center;
+  height: 90vh;
 `
 
 const StyledTitle = styled.h1`
@@ -87,13 +88,7 @@ const StyledImg = styled.div`
   }
 `
 
-const AnimatedDiv = styled.div`
-  display: flex;
-  width: 100%;
-  background: red;
-  justify-content: space-between;
-  padding: 0 50px;
-`
+const AnimatedDiv = styled.div``
 
 const HeroSection = () => {
   return (
@@ -117,17 +112,17 @@ const HeroSection = () => {
       </StyledInput>
 
       <AnimatedDiv>
-        <StyledImg>
+        {/* <StyledImg>
           <img src={IdeaIcon} alt="test" />
-        </StyledImg>
-        <motion.div
+        </StyledImg> */}
+        {/* <motion.div
           animate={{
             rotate: 360,
             borderRadius: ['50% 50%', '2% 50%'],
-            x: 0,
+            x: 75,
           }}
           initial={{
-            x: 25,
+            x: -75,
           }}
           transition={{
             flip: Infinity,
@@ -140,11 +135,12 @@ const HeroSection = () => {
             width: '50px',
             borderRadius: '2% 50%',
           }}
-        ></motion.div>
-
-        <StyledImg>
-          <img src={MobileIcon} alt="test" />
-        </StyledImg>
+        ></motion.div> */}
+        <motion.div initial={{ opacity: 0 }} transition={{ opacity: 1, delay: 2 }}>
+          <StyledImg>
+            <img src={MobileIcon} alt="test" />
+          </StyledImg>
+        </motion.div>
       </AnimatedDiv>
     </Wrapper>
   )
