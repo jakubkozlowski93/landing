@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import Bar from './../../atoms/Bar/Bar'
 import ServiceIcon from './../../../assets/icons/ServiceIcon.svg'
+import { motion } from 'framer-motion'
 
 const Wrapper = styled.div`
   display: flex;
@@ -41,15 +42,16 @@ const Services = () => {
   return (
     <Wrapper>
       <Bar text="Usługi" />
-      <SingleService>
-        <img src={ServiceIcon} alt="Service icon" />
-        <StyledTitle>projekt</StyledTitle>
-        <StyledInfo>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa, expedita ab aliquam atque consequuntur id possimus, eum quod incidunt
-          corrupti quia iure dicta.
-        </StyledInfo>
-      </SingleService>
-
+      <motion.div>
+        <SingleService>
+          <img src={ServiceIcon} alt="Service icon" />
+          <StyledTitle>projekt</StyledTitle>
+          <StyledInfo>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa, expedita ab aliquam atque consequuntur id possimus, eum quod incidunt
+            corrupti quia iure dicta.
+          </StyledInfo>
+        </SingleService>
+      </motion.div>
       <SingleService>
         <img src={ServiceIcon} alt="Service icon" />
         <StyledTitle>projekt</StyledTitle>
