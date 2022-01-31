@@ -13,9 +13,9 @@ const Container = styled.div`
   width: 100%;
   padding: 80px 50px 40px 50px;
   overflow-x: hidden;
-  /* display: grid;
-  grid-template-rows: 50px 1fr 50px; */
 `
+
+const Wrapper = styled.div``
 
 const Home = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -27,18 +27,17 @@ const Home = () => {
   return (
     <>
       <GlobalStyle />
-
       <Header isOpen={isOpen} toggleMenu={toggleMenu} />
-
       <Container>
-        {isOpen ? null : <Menu />}
         {isOpen ? (
-          <>
+          <Wrapper>
             <HeroSection />
-            <Bar text="usługi" />
-          </>
+          </Wrapper>
         ) : (
-          <Footer />
+          <>
+            <Menu />
+            <Footer />
+          </>
         )}
       </Container>
     </>
