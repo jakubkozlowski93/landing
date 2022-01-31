@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 import { motion } from 'framer-motion'
+import MobileIcon from './../../../assets/icons/MobileIcon.svg'
+import IdeaIcon from './../../../assets/icons/IdeaIcon.svg'
 
 const Wrapper = styled.div`
   width: 100%;
@@ -78,6 +80,21 @@ const Loader = styled(motion.div)`
   flex-direction: column;
 `
 
+const StyledImg = styled.div`
+  img {
+    width: 50px;
+    height: 50px;
+  }
+`
+
+const AnimatedDiv = styled.div`
+  display: flex;
+  width: 100%;
+  background: red;
+  justify-content: space-between;
+  padding: 0 50px;
+`
+
 const HeroSection = () => {
   return (
     <Wrapper>
@@ -98,27 +115,37 @@ const HeroSection = () => {
         <input type="text" placeholder="Enter your email" />
         <input type="button" value="Get Started" />
       </StyledInput>
-      <motion.div
-        animate={{
-          rotate: 360,
-          borderRadius: ['50% 50%', '2% 50%'],
-          x: 75,
-        }}
-        initial={{
-          x: -75,
-        }}
-        transition={{
-          flip: Infinity,
-          duration: 2,
-          ease: 'easeInOut',
-        }}
-        style={{
-          height: '50px',
-          background: '#00ad9f',
-          width: '50px',
-          borderRadius: '2% 50%',
-        }}
-      ></motion.div>
+
+      <AnimatedDiv>
+        <StyledImg>
+          <img src={IdeaIcon} alt="test" />
+        </StyledImg>
+        <motion.div
+          animate={{
+            rotate: 360,
+            borderRadius: ['50% 50%', '2% 50%'],
+            x: 0,
+          }}
+          initial={{
+            x: 25,
+          }}
+          transition={{
+            flip: Infinity,
+            duration: 2,
+            ease: 'easeInOut',
+          }}
+          style={{
+            height: '50px',
+            background: '#00ad9f',
+            width: '50px',
+            borderRadius: '2% 50%',
+          }}
+        ></motion.div>
+
+        <StyledImg>
+          <img src={MobileIcon} alt="test" />
+        </StyledImg>
+      </AnimatedDiv>
     </Wrapper>
   )
 }
