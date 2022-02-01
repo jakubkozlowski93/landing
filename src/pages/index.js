@@ -8,8 +8,6 @@ import Menu from './../components/organisms/Menu/Menu'
 import Services from '../components/organisms/Services/Services'
 
 const Container = styled.div`
-  height: 100vh;
-  height: calc(var(--vh, 1vh) * 100);
   width: 100%;
   padding: 80px 50px 40px 50px;
   overflow-x: hidden;

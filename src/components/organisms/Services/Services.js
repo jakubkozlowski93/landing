@@ -50,7 +50,7 @@ const Services = () => {
     if (inView) {
       animation.start(i => ({
         x: 0,
-        transition: { delay: i * 2, type: 'spring, duration: 1', bounce: 0.3 },
+        transition: { delay: i * 2, type: 'spring', duration: 1, bounce: 0.3 },
       }))
     }
     if (!inView) {

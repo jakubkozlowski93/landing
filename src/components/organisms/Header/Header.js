@@ -20,6 +20,10 @@ const HamburgerButton = styled.div`
 `
 
 const Header = ({ isOpen, toggleMenu }) => {
+  React.useEffect(() => {
+    window.addEventListener('scroll', () => console.log(window.scrollY), true)
+  }, [])
+
   return (
     <Wrapper>
       <StyledLogo>logo.</StyledLogo>
