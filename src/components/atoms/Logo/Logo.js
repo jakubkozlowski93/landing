@@ -7,4 +7,5 @@ export const StyledLogo = styled.h1`
   line-height: 120%;
   letter-spacing: -0.03em;
   color: #242635;
+  color: rgb(243, 243, 243);
 `
