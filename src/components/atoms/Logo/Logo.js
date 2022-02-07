@@ -6,6 +6,5 @@ export const StyledLogo = styled.h1`
   font-size: 36px;
   line-height: 120%;
   letter-spacing: -0.03em;
-  color: #242635;
-  color: rgb(243, 243, 243);
+  color: ${({ isScrolled }) => (isScrolled ? `rgb(243, 243, 243)` : `#242635`)};
 `
