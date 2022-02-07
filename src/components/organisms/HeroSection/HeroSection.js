@@ -3,15 +3,19 @@ import styled from 'styled-components'
 import { motion } from 'framer-motion'
 import MobileIcon from './../../../assets/icons/MobileIcon.svg'
 import IdeaIcon from './../../../assets/icons/IdeaIcon.svg'
+import background from './../../../assets/images/background.png'
 
 const Wrapper = styled.div`
-  width: 100%;
+  width: 100vw;
+  height: 100vh;
   display: flex;
   flex-direction: column;
-  margin-top: 90px;
+  /* margin-top: 90px; */
   justify-content: center;
   align-items: center;
-  height: 90vh;
+  background-image: url(${background});
+  background-size: cover;
+  background-position: center, center;
 `
 
 const StyledTitle = styled.h1`
@@ -67,20 +71,6 @@ const StyledInput = styled.form`
   }
 `
 
-const Loader = styled(motion.div)`
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  background: #18315b;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-`
-
 const StyledImg = styled.div`
   img {
     width: 50px;
@@ -93,7 +83,7 @@ const AnimatedDiv = styled.div``
 const HeroSection = () => {
   return (
     <Wrapper>
-      <motion.div initial={{ y: '-100vh' }} animate={{ y: 0 }} transition={{ type: 'spring', stiffness: 60 }}>
+      {/* <motion.div initial={{ y: '-100vh' }} animate={{ y: 0 }} transition={{ type: 'spring', stiffness: 60 }}>
         <StyledTitle>Company.</StyledTitle>
       </motion.div>
 
@@ -105,37 +95,13 @@ const HeroSection = () => {
           A style for every story, get the latest style here at an inexpensive price.
           <br /> <br />A style for every story, get the latest style.
         </StyledInfo>
-      </motion.div>
+      </motion.div> */}
       <StyledInput>
         <input type="text" placeholder="Enter your email" />
         <input type="button" value="Get Started" />
       </StyledInput>
 
       <AnimatedDiv>
-        {/* <StyledImg>
-          <img src={IdeaIcon} alt="test" />
-        </StyledImg> */}
-        {/* <motion.div
-          animate={{
-            rotate: 360,
-            borderRadius: ['50% 50%', '2% 50%'],
-            x: 75,
-          }}
-          initial={{
-            x: -75,
-          }}
-          transition={{
-            flip: Infinity,
-            duration: 2,
-            ease: 'easeInOut',
-          }}
-          style={{
-            height: '50px',
-            background: '#00ad9f',
-            width: '50px',
-            borderRadius: '2% 50%',
-          }}
-        ></motion.div> */}
         <motion.div initial={{ opacity: 0 }} transition={{ opacity: 1, delay: 2 }}>
           <StyledImg>
             <img src={MobileIcon} alt="test" />

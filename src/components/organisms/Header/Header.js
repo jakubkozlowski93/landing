@@ -9,7 +9,7 @@ const Wrapper = styled.nav`
   width: 100%;
   height: 50px;
   position: fixed;
-  padding: 50px 50px 40px 50px;
+  padding: 50px 50px 50px 50px;
   background: ${({ isScrolled }) => (isScrolled ? 'rgb(46, 53, 63)' : `rgb(243, 243, 243)`)};
   z-index: 2;
   box-shadow: ${({ isScrolled }) => (isScrolled ? `-2px 2px 12px 1px rgba(120, 119, 120, 1)` : null)};
@@ -54,7 +54,7 @@ const Header = ({ isOpen, toggleMenu }) => {
     <Wrapper isScrolled={isScrolled}>
       <StyledLogo isScrolled={isScrolled}>logo.</StyledLogo>
 
-      <HamburgerButton isScrolled={isScrolled} onClick={toggleMenu}>
+      <HamburgerButton animate={{ scale: 1 }} isScrolled={isScrolled} onClick={toggleMenu}>
         {isOpen ? (
           <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect x="0.5" y="0.5" width="47" height="47" rx="5.5" stroke="#242635" />

@@ -9,7 +9,7 @@ import Services from '../components/organisms/Services/Services'
 
 const Container = styled.div`
   width: 100%;
-  padding: 80px 50px 40px 50px;
+  padding: 80px 0px 40px 0px;
   overflow-x: hidden;
 `
 
