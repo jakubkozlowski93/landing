@@ -10,7 +10,7 @@ const Wrapper = styled.nav`
   height: 50px;
   position: fixed;
   padding: 50px 50px 50px 50px;
-  background: ${({ isScrolled }) => (isScrolled ? 'rgb(46, 53, 63)' : `rgb(243, 243, 243)`)};
+  background: ${({ isScrolled }) => (isScrolled ? 'rgb(46, 53, 63)' : null)};
   z-index: 2;
   box-shadow: ${({ isScrolled }) => (isScrolled ? `-2px 2px 12px 1px rgba(120, 119, 120, 1)` : null)};
   opacity: 0.8;

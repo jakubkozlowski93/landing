@@ -1,8 +1,5 @@
 import React from 'react'
-import styled from 'styled-components'
-import { motion } from 'framer-motion'
-import MobileIcon from './../../../assets/icons/MobileIcon.svg'
-import IdeaIcon from './../../../assets/icons/IdeaIcon.svg'
+import styled, { keyframes } from 'styled-components'
 import background from './../../../assets/images/background.png'
 
 const Wrapper = styled.div`
@@ -10,28 +7,11 @@ const Wrapper = styled.div`
   height: 100vh;
   display: flex;
   flex-direction: column;
-  /* margin-top: 90px; */
   justify-content: center;
   align-items: center;
   background-image: url(${background});
   background-size: cover;
   background-position: center, center;
-`
-
-const StyledTitle = styled.h1`
-  font-style: normal;
-  font-weight: bold;
-  font-size: ${({ small }) => (small ? '16px' : '46px')};
-  line-height: ${({ small }) => (small ? '24px' : '55px')};
-  padding: 0;
-  margin: 0;
-`
-
-const StyledInfo = styled.p`
-  font-size: 16px;
-  line-height: 24px;
-  opacity: 0.6;
-  margin: 40px 10px;
 `
 
 const StyledInput = styled.form`
@@ -71,43 +51,46 @@ const StyledInput = styled.form`
   }
 `
 
-const StyledImg = styled.div`
-  img {
-    width: 50px;
-    height: 50px;
-  }
+const typing = keyframes`
+  from { width: 0 }
+  to { width: 100% }`
+
+const blinkCaret = keyframes`
+
+ from, to { border-color: transparent }
+  50% { border-color: orange }
 `
 
-const AnimatedDiv = styled.div``
+const StyledTitle = styled.div`
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: 0.15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  letter-spacing: 0.15em; /* Adjust as needed */
+  animation: ${typing} 2.5s steps(30, end), ${blinkCaret} 0.75s step-end infinite;
+  /* width: 100%; */
+
+  h1 {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    /* font-family: 'Montserrat'; */
+    color: #fff;
+    margin: 0;
+    padding: 0;
+  }
+`
 
 const HeroSection = () => {
   return (
     <Wrapper>
-      {/* <motion.div initial={{ y: '-100vh' }} animate={{ y: 0 }} transition={{ type: 'spring', stiffness: 60 }}>
-        <StyledTitle>Company.</StyledTitle>
-      </motion.div>
+      <StyledTitle>
+        <h1>Sprawdź, aby się przekonać.</h1>
+      </StyledTitle>
 
-      <motion.div initial={{ x: '100vh' }} animate={{ x: 0 }} transition={{ type: 'spring', stiffness: 60, delay: 0.5 }}>
-        <StyledTitle small>CREATE YOUR OWN STYLE</StyledTitle>
-      </motion.div>
-      <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ ease: 'easeIn', duration: 2, delay: 0.6 }}>
-        <StyledInfo>
-          A style for every story, get the latest style here at an inexpensive price.
-          <br /> <br />A style for every story, get the latest style.
-        </StyledInfo>
-      </motion.div> */}
       <StyledInput>
         <input type="text" placeholder="Enter your email" />
         <input type="button" value="Get Started" />
       </StyledInput>
-
-      <AnimatedDiv>
-        <motion.div initial={{ opacity: 0 }} transition={{ opacity: 1, delay: 2 }}>
-          <StyledImg>
-            <img src={MobileIcon} alt="test" />
-          </StyledImg>
-        </motion.div>
-      </AnimatedDiv>
     </Wrapper>
   )
 }
