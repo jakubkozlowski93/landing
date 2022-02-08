@@ -31,10 +31,10 @@ const Footer = () => {
             <img src={FacebookIcon} alt="Facebook icon" />
           </li>
           <li>
-            <img src={LinkedInIcon} alt="LinkedIn icon" />
+            <img src={InstagramIcon} alt="Instagram Icon" />
           </li>
           <li>
-            <img src={InstagramIcon} alt="Instagram Icon" />
+            <img src={LinkedInIcon} alt="LinkedIn icon" />
           </li>
         </ul>
       </Wrapper>

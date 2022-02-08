@@ -7,6 +7,7 @@ html {
     font-size: 16px;
     height: 100%; 
     overflow:auto;
+     scroll-behavior: smooth;
   }
   
 *, *::after, *::before {
