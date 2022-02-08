@@ -10,6 +10,7 @@ const Wrapper = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding: 50px;
 `
 
 const SingleService = styled.div`
@@ -58,12 +59,6 @@ const Services = () => {
         x: '-100vh',
       })
     }
-
-    // if (inView) {
-    //   console.log(`Section services is visible: ${inView}`)
-    // } else {
-    //   console.log(`Section services is visible: ${inView}`)
-    // }
   }, [inView])
 
   return (

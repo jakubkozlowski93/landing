@@ -20,7 +20,7 @@ const StyledInput = styled.form`
   width: 280px;
   height: 45px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   padding: 0 10px 0 20px;
   text-align: center;
@@ -52,40 +52,33 @@ const StyledInput = styled.form`
 `
 
 const typing = keyframes`
-  from { width: 0 }
-  to { width: 100% }`
-
-const blinkCaret = keyframes`
-
- from, to { border-color: transparent }
-  50% { border-color: orange }
+ from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
 `
 
-const StyledTitle = styled.div`
-  overflow: hidden; /* Ensures the content is not revealed until the animation */
+const SmallWrapper = styled.div`
+  color: #fff;
+  font-family: monospace;
+  overflow: hidden !important; /* Ensures the content is not revealed until the animation */
   border-right: 0.15em solid orange; /* The typwriter cursor */
-  white-space: nowrap; /* Keeps the content on a single line */
+  white-space: wrap;
+  margin: 0 auto;
   letter-spacing: 0.15em; /* Adjust as needed */
-  animation: ${typing} 2.5s steps(30, end), ${blinkCaret} 0.75s step-end infinite;
-  /* width: 100%; */
-
-  h1 {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 26px;
-    /* font-family: 'Montserrat'; */
-    color: #fff;
-    margin: 0;
-    padding: 0;
-  }
+  /* animation: typing 3.5s steps(30, end), blink-caret 0.5s step-end infinite; */
+  animation: ${typing} 1s;
+  box-sizing: border-box;
 `
 
 const HeroSection = () => {
   return (
     <Wrapper>
-      <StyledTitle>
-        <h1>Sprawdź, aby się przekonać.</h1>
-      </StyledTitle>
+      <SmallWrapper>
+        <h1>The cat and the hat dosent.</h1>
+      </SmallWrapper>
 
       <StyledInput>
         <input type="text" placeholder="Enter your email" />

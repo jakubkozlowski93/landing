@@ -12,6 +12,7 @@ const Wrapper = styled.div`
   font-size: 15px;
   line-height: 19px;
   text-transform: uppercase;
+  margin: 30px 0 50px 0;
 `
 
 const Bar = ({ text }) => {
