@@ -12,6 +12,7 @@ const Wrapper = styled.div`
   background-image: url(${background});
   background-size: cover;
   background-position: center, center;
+  margin-top: 20px;
 `
 
 const StyledInput = styled.form`
