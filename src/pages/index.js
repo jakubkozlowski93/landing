@@ -9,6 +9,7 @@ import Services from '../components/organisms/Services/Services'
 import Footer from './../components/organisms/Footer/Footer'
 import { motion } from 'framer-motion'
 import Portfolio from './../components/organisms/Portfolio/Portfolio'
+import Form from '../components/organisms/Form/Form'
 
 const Container = styled.div`
   width: 100%;
@@ -35,6 +36,7 @@ const Home = () => {
             <HeroSection />
             <Services />
             <Portfolio />
+            <Form />
             <Footer />
           </Wrapper>
         ) : (

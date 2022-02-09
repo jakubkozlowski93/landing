@@ -8,5 +8,7 @@ module.exports = {
         display: 'swap',
       },
     },
+
+    `gatsby-theme-material-ui`,
   ],
 }

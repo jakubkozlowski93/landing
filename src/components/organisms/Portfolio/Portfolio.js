@@ -11,7 +11,7 @@ const Wrapper = styled.div`
 `
 
 const SingleRealization = styled.div`
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 `
 
 const StyledTitle = styled.h1`
