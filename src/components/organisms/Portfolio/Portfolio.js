@@ -46,7 +46,7 @@ const StyledLink = styled.a`
 const Portfolio = () => {
   return (
     <Wrapper>
-      <Bar text="usługi" />
+      <Bar text="realizacje" />
       <SingleRealization>
         <StyledTitle>01 / PROJECT NAME</StyledTitle>
         <ImgWrapper>

@@ -45,17 +45,17 @@ const Services = () => {
     threshold: 0.2,
   })
 
-  const animation = useAnimation()
+  const animationFromLeft = useAnimation()
 
   useEffect(() => {
     if (inView) {
-      animation.start(i => ({
+      animationFromLeft.start(i => ({
         x: 0,
-        transition: { delay: i * 2, type: 'spring', duration: 1, bounce: 0.3 },
+        transition: { delay: i * 0.2, type: 'stiffness', duration: 1, bounce: 0.3 },
       }))
     }
     if (!inView) {
-      animation.start({
+      animationFromLeft.start({
         x: '-100vh',
       })
     }
@@ -64,7 +64,7 @@ const Services = () => {
   return (
     <Wrapper ref={ref}>
       <Bar text="Usługi" />
-      <motion.div custom={0} animate={animation}>
+      <motion.div custom={0} animate={animationFromLeft}>
         <SingleService>
           <img src={ServiceIcon} alt="Service icon" />
           <StyledTitle>projekt</StyledTitle>
@@ -75,7 +75,7 @@ const Services = () => {
         </SingleService>
       </motion.div>
 
-      <motion.div custom={1} animate={animation}>
+      <motion.div custom={1} animate={animationFromLeft}>
         <SingleService>
           <img src={ServiceIcon} alt="Service icon" />
           <StyledTitle>projekt</StyledTitle>
@@ -86,23 +86,27 @@ const Services = () => {
         </SingleService>
       </motion.div>
 
-      <SingleService>
-        <img src={ServiceIcon} alt="Service icon" />
-        <StyledTitle>projekt</StyledTitle>
-        <StyledInfo>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa, expedita ab aliquam atque consequuntur id possimus, eum quod incidunt
-          corrupti quia iure dicta.
-        </StyledInfo>
-      </SingleService>
+      <motion.div custom={2} animate={animationFromLeft}>
+        <SingleService>
+          <img src={ServiceIcon} alt="Service icon" />
+          <StyledTitle>projekt</StyledTitle>
+          <StyledInfo>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa, expedita ab aliquam atque consequuntur id possimus, eum quod incidunt
+            corrupti quia iure dicta.
+          </StyledInfo>
+        </SingleService>
+      </motion.div>
 
-      <SingleService>
-        <img src={ServiceIcon} alt="Service icon" />
-        <StyledTitle>projekt</StyledTitle>
-        <StyledInfo>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa, expedita ab aliquam atque consequuntur id possimus, eum quod incidunt
-          corrupti quia iure dicta.
-        </StyledInfo>
-      </SingleService>
+      <motion.div custom={3} animate={animationFromLeft}>
+        <SingleService>
+          <img src={ServiceIcon} alt="Service icon" />
+          <StyledTitle>projekt</StyledTitle>
+          <StyledInfo>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa, expedita ab aliquam atque consequuntur id possimus, eum quod incidunt
+            corrupti quia iure dicta.
+          </StyledInfo>
+        </SingleService>
+      </motion.div>
     </Wrapper>
   )
 }
