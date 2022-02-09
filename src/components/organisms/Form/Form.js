@@ -3,19 +3,27 @@ import styled from 'styled-components'
 import Bar from './../../atoms/Bar/Bar'
 import TextField from '@mui/material/TextField'
 
-const Wrapper = styled.div`
+const Wrapper = styled.form`
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-around;
   padding: 0 50px;
-  margin-bottom: 200px;
 `
+
+const style = {
+  marginBottom: '20px',
+}
 
 const Form = () => {
   return (
-    <Wrapper>
+    <Wrapper autoComplete={false}>
       <Bar text="kontakt" />
-      <TextField id="outlined-basic" label="Outlined" variant="outlined" />
+      <TextField id="name" label="ENTER YOUR NAME*" variant="outlined" sx={{ ...style }} fullWidth />
+      <TextField id="email" label="ENTER YOUR EMAIL*" variant="outlined" sx={{ ...style }} fullWidth />
+      <TextField id="phone" label="ENTER YOUR PHONE*" variant="outlined" sx={{ ...style }} fullWidth />
+      <TextField id="message" label="YOUR MESSAGE*" variant="outlined" sx={{ ...style }} fullWidth multiline rows={4} />
+      <Bar text="submit" />
     </Wrapper>
   )
 }
