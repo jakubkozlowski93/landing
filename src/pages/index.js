@@ -8,6 +8,7 @@ import Menu from './../components/organisms/Menu/Menu'
 import Services from '../components/organisms/Services/Services'
 import Footer from './../components/organisms/Footer/Footer'
 import { motion } from 'framer-motion'
+import Portfolio from './../components/organisms/Portfolio/Portfolio'
 
 const Container = styled.div`
   width: 100%;
@@ -18,7 +19,7 @@ const Container = styled.div`
 const Wrapper = styled.div``
 
 const Home = () => {
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(true)
 
   const toggleMenu = () => {
     setIsOpen(!isOpen)
@@ -33,6 +34,7 @@ const Home = () => {
           <Wrapper>
             <HeroSection />
             <Services />
+            <Portfolio />
             <Footer />
           </Wrapper>
         ) : (
