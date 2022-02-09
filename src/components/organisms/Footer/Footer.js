@@ -14,6 +14,7 @@ const StyledCopyright = styled.p`
   font-weight: bold;
   font-size: 15px;
   line-height: 20px;
+  margin-top: 30px;
 `
 
 const BackToTopWrapper = styled.div`
