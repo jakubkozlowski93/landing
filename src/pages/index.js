@@ -23,16 +23,6 @@ const Home = () => {
     setIsOpen(!isOpen)
   }
 
-  const ScrollToTop = () => {
-    window.addEventListener(
-      'click',
-      () => {
-        window.scrollTo(0, 0)
-      },
-      true
-    )
-  }
-
   return (
     <>
       <GlobalStyle />
@@ -42,7 +32,7 @@ const Home = () => {
           <Wrapper>
             <HeroSection />
             <Services />
-            <Footer scrollTop />
+            <Footer />
           </Wrapper>
         ) : (
           <>
