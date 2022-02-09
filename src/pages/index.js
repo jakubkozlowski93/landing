@@ -7,6 +7,7 @@ import HeroSection from '../components/organisms/HeroSection/HeroSection'
 import Menu from './../components/organisms/Menu/Menu'
 import Services from '../components/organisms/Services/Services'
 import Footer from './../components/organisms/Footer/Footer'
+import { motion } from 'framer-motion'
 
 const Container = styled.div`
   width: 100%;
@@ -37,7 +38,9 @@ const Home = () => {
         ) : (
           <>
             <Menu />
-            <SocialIcons />
+            <motion.div initial={{ y: '100vh' }} animate={{ y: 0 }} transition={{ type: 'spring', stiffness: 60, delay: 0.2 }}>
+              <SocialIcons />
+            </motion.div>
           </>
         )}
       </Container>
