@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import GlobalStyle from './styles/GlobalStyle'
+import GlobalStyle from './../styles/GlobalStyle'
 import styled from 'styled-components'
 import Header from '../components/organisms/Header/Header'
 import SocialIcons from './../components/molecules/SocialIcons/SocialIcons'
