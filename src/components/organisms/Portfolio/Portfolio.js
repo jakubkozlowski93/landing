@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import Bar from './../../atoms/Bar/Bar'
 import image from './../../../assets/images/realization.png'
+import { Link } from 'gatsby'
 
 const Wrapper = styled.div`
   padding: 0 50px 50px 50px;
@@ -33,7 +34,7 @@ const StyledDescription = styled.p`
   color: #606060;
 `
 
-const StyledLink = styled.a`
+const StyledLink = styled(Link)`
   font-family: Inter, sans-serif;
   font-weight: 600;
   font-size: 18px;
@@ -53,7 +54,7 @@ const Portfolio = () => {
           <img src={image} alt="Single realization image" />
         </ImgWrapper>
         <StyledDescription>Sculpted in ZBrush, Retopologized and UVs done in Maya, Textured in Mari, Rendered using Arnold.</StyledDescription>
-        <StyledLink href="#">More shots from this project ↗</StyledLink>
+        <StyledLink to="/singlepage">More shots from this project ↗</StyledLink>
       </SingleRealization>
       <SingleRealization>
         <StyledTitle>01 / PROJECT NAME</StyledTitle>
