@@ -1,7 +1,4 @@
 import React, { useState } from 'react'
-import GlobalStyle from './../styles/GlobalStyle'
-import styled from 'styled-components'
-import Header from '../components/organisms/Header/Header'
 import SocialIcons from './../components/molecules/SocialIcons/SocialIcons'
 import HeroSection from '../components/organisms/HeroSection/HeroSection'
 import Menu from './../components/organisms/Menu/Menu'
@@ -10,14 +7,7 @@ import Footer from './../components/organisms/Footer/Footer'
 import { motion } from 'framer-motion'
 import Portfolio from './../components/organisms/Portfolio/Portfolio'
 import Form from '../components/organisms/Form/Form'
-
-const Container = styled.div`
-  width: 100%;
-  padding: 80px 0px 40px 0px;
-  overflow-x: hidden;
-`
-
-const Wrapper = styled.div``
+import Layout from '../components/Layout/Layout'
 
 const Home = () => {
   const [isOpen, setIsOpen] = useState(true)
@@ -27,28 +17,24 @@ const Home = () => {
   }
 
   return (
-    <>
-      <GlobalStyle />
-      <Header isOpen={isOpen} toggleMenu={toggleMenu} />
-      <Container>
-        {isOpen ? (
-          <Wrapper>
-            <HeroSection />
-            <Services />
-            <Portfolio />
-            <Form />
-            <Footer />
-          </Wrapper>
-        ) : (
-          <>
-            <Menu />
-            <motion.div initial={{ y: '100vh' }} animate={{ y: 0 }} transition={{ type: 'spring', stiffness: 60, delay: 0.2 }}>
-              <SocialIcons />
-            </motion.div>
-          </>
-        )}
-      </Container>
-    </>
+    <Layout toggleMenu={toggleMenu} isOpen={isOpen}>
+      {isOpen ? (
+        <>
+          <HeroSection />
+          <Services />
+          <Portfolio />
+          <Form />
+          <Footer />
+        </>
+      ) : (
+        <>
+          <Menu />
+          <motion.div initial={{ y: '100vh' }} animate={{ y: 0 }} transition={{ type: 'spring', stiffness: 60, delay: 0.2 }}>
+            <SocialIcons />
+          </motion.div>
+        </>
+      )}
+    </Layout>
   )
 }
 
