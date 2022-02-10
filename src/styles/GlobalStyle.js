@@ -21,6 +21,12 @@ body {
     background-color: rgb(243, 243, 243);
     height: 100%;
   }
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+
 `
 
 export default GlobalStyle
