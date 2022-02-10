@@ -61,17 +61,26 @@ const typing = keyframes`
   }
 `
 
+const blinkCaret = keyframes`
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
+
+`
+
 const SmallWrapper = styled.div`
   color: #fff;
   font-family: monospace;
-  overflow: hidden !important; /* Ensures the content is not revealed until the animation */
-  border-right: 0.15em solid orange; /* The typwriter cursor */
-  white-space: wrap;
+  overflow: hidden;
+  white-space: nowrap;
   margin: 0 auto;
-  letter-spacing: 0.15em; /* Adjust as needed */
-  /* animation: typing 3.5s steps(30, end), blink-caret 0.5s step-end infinite; */
-  animation: ${typing} 1s;
-  box-sizing: border-box;
+  letter-spacing: 0.15em;
+  font-size: 11px;
+
+  h1 {
+    animation: ${typing} 2s steps(30, end), ${blinkCaret} 0.5s step-end infinite;
+    overflow: hidden;
+    border-right: 0.15em solid orange;
+  }
 `
 
 const HeroSection = () => {
