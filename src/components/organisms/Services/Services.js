@@ -41,6 +41,8 @@ const StyledInfo = styled.p`
 `
 
 const Services = () => {
+  const [isFinished, setIsFinished] = React.useState(false)
+
   const { ref, inView } = useInView({
     threshold: 0.2,
   })
@@ -50,16 +52,17 @@ const Services = () => {
   useEffect(() => {
     if (inView) {
       animationFromLeft.start(i => ({
-        x: 0,
+        x: '0',
         transition: { delay: i * 0.2, type: 'stiffness', duration: 1, bounce: 0.3 },
       }))
+      setIsFinished(true)
     }
-    if (!inView) {
+    if (!inView && isFinished !== true) {
       animationFromLeft.start({
         x: '-100vh',
       })
     }
-  }, [inView])
+  }, [inView, isFinished])
 
   return (
     <Wrapper ref={ref}>
