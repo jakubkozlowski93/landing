@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import { StyledLogo } from '../../atoms/Logo/Logo'
+import DesktopMenu from '../DesktopMenu/DesktopMenu'
 
 const Wrapper = styled.nav`
   display: flex;
@@ -30,6 +31,10 @@ const HamburgerButton = styled.div`
   path {
     fill: ${({ isScrolled }) => (isScrolled ? 'rgb(243, 243, 243)' : `rgb(46, 53, 63)`)};
   }
+
+  @media (min-width: 900px) {
+    display: none;
+  }
 `
 
 const Header = ({ isOpen, toggleMenu }) => {
@@ -54,7 +59,7 @@ const Header = ({ isOpen, toggleMenu }) => {
   return (
     <Wrapper isScrolled={isScrolled}>
       <StyledLogo isScrolled={isScrolled}>logo.</StyledLogo>
-
+      <DesktopMenu />
       <HamburgerButton animate={{ scale: 1 }} isScrolled={isScrolled} onClick={toggleMenu}>
         {isOpen ? (
           <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">

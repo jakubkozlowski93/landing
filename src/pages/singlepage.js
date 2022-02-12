@@ -6,7 +6,7 @@ import image from './../assets/images/realization.png'
 import Carousel from './../components/molecules/Carousel/Carousel'
 import { Link } from 'gatsby'
 import { motion } from 'framer-motion'
-import Menu from './../components/organisms/Menu/Menu'
+import MobileMenu from './../components/organisms/MobileMenu/MobileMenu'
 
 const Wrapper = styled.div`
   padding: 50px;
@@ -86,7 +86,7 @@ const Singlepage = () => {
         </>
       ) : (
         <>
-          <Menu />
+          <MobileMenu />
           <motion.div initial={{ y: '100vh' }} animate={{ y: 0 }} transition={{ type: 'spring', stiffness: 60, delay: 0.2 }}>
             <SocialIcons />
           </motion.div>
