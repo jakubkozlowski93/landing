@@ -9,6 +9,12 @@ const Wrapper = styled.form`
   align-items: center;
   justify-content: space-around;
   padding: 0 50px;
+  width: 100%;
+
+  @media (min-width: 600px) {
+    width: 600px;
+    margin: 0 auto;
+  }
 `
 
 const style = {
