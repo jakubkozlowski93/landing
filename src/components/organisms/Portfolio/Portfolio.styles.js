@@ -28,9 +28,15 @@ export const SingleRealization = styled.div`
     display: grid;
     grid-template-columns: 2;
     grid-template-rows: 4;
-    padding: 30px 0;
+    padding: 30px 10px;
     grid-column-gap: 30px;
     border-bottom: 1px solid black;
+    transition-duration: 0.5s;
+
+    :hover {
+      box-shadow: -2px 2px 12px 1px rgba(120, 119, 120, 1);
+      border-bottom: none;
+    }
   }
 `
 
