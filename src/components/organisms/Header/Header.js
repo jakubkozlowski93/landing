@@ -59,7 +59,7 @@ const Header = ({ isOpen, toggleMenu }) => {
   return (
     <Wrapper isScrolled={isScrolled}>
       <StyledLogo isScrolled={isScrolled}>logo.</StyledLogo>
-      <DesktopMenu />
+      <DesktopMenu isScrolled={isScrolled} />
       <HamburgerButton animate={{ scale: 1 }} isScrolled={isScrolled} onClick={toggleMenu}>
         {isOpen ? (
           <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">

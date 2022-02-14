@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 
 const StyledMenu = styled.ul`
@@ -24,7 +24,7 @@ const StyledMenu = styled.ul`
     font-size: 32px;
     line-height: 120%;
     letter-spacing: -0.03em;
-    color: #242635;
+    color: ${({ isScrolled }) => (isScrolled ? 'rgb(243, 243, 243)' : `rgb(46, 53, 63)`)};
     text-transform: capitalize;
     padding: 20px 0;
     cursor: pointer;
@@ -32,14 +32,30 @@ const StyledMenu = styled.ul`
     font-family: Poppins, sans-serif;
     font-size: 21px;
     padding: 0 10px;
-
-    }
   }
 `
 
 const DesktopMenu = () => {
+  const [scrollPosition, setScrollPosition] = useState(0)
+  const [isScrolled, setIsScrolled] = useState(false)
+
+  useEffect(() => {
+    window.addEventListener(
+      'scroll',
+      () => {
+        setScrollPosition(window.scrollY)
+        if (scrollPosition >= 50) {
+          setIsScrolled(true)
+        } else {
+          setIsScrolled(false)
+        }
+      },
+      true
+    )
+  }, [scrollPosition])
+
   return (
-    <StyledMenu>
+    <StyledMenu isScrolled={isScrolled}>
       <li>o mnie</li>
       <li>usługi</li>
       <li>realizacje</li>
