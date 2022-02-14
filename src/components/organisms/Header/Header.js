@@ -4,11 +4,11 @@ import { StyledLogo } from '../../atoms/Logo/Logo'
 import DesktopMenu from '../DesktopMenu/DesktopMenu'
 
 const Wrapper = styled.nav`
+  width: 100%;
+  height: 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
-  height: 50px;
   position: fixed;
   padding: 50px 50px 50px 50px;
   background: ${({ isScrolled }) => (isScrolled ? 'rgb(46, 53, 63)' : null)};
