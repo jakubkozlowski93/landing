@@ -1,26 +1,6 @@
 import React from 'react'
-import styled from 'styled-components'
 import SocialIcons from './../../molecules/SocialIcons/SocialIcons'
-
-const Wrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-`
-
-const StyledCopyright = styled.p`
-  font-family: 'Nunito';
-  font-style: normal;
-  font-weight: bold;
-  font-size: 15px;
-  line-height: 20px;
-  margin-top: 30px;
-`
-
-const BackToTopWrapper = styled.div`
-  margin-top: 20px;
-  cursor: pointer;
-`
+import { Wrapper, StyledCopyright, BackToTopWrapper } from './Footer.styles'
 
 const Footer = () => {
   const scrollToTop = () => {

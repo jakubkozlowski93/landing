@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import SocialIcons from './../components/molecules/SocialIcons/SocialIcons'
 import HeroSection from '../components/organisms/HeroSection/HeroSection'
-import Menu from '../components/organisms/MobileMenu/MobileMenu'
 import Services from '../components/organisms/Services/Services'
 import Footer from './../components/organisms/Footer/Footer'
 import { motion } from 'framer-motion'
