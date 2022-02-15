@@ -60,7 +60,7 @@ const typing = keyframes`
   }
 `
 
-export const blinkCaret = keyframes`
+const blinkCaret = keyframes`
   from, to { border-color: transparent }
   50% { border-color: orange; }
 

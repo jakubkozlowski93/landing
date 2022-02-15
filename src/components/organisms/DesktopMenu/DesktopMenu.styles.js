@@ -1,4 +1,13 @@
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
+
+const expand = keyframes`
+ from {
+    width: 0;
+  }
+  to {
+    width: 70%;
+  }
+`
 
 export const StyledMenu = styled.ul`
   display: none;
@@ -37,10 +46,13 @@ export const StyledMenu = styled.ul`
       content: '';
       position: absolute;
       width: 70%;
-      height: 50%;
-      background: red;
-      bottom: 0;
+      height: 80%;
+      background: #00ad9f;
+      bottom: 50%;
+      left: -1px;
       z-index: -1;
+      opacity: 0.5;
+      animation: ${expand} 0.5s ease;
     }
   }
 `
