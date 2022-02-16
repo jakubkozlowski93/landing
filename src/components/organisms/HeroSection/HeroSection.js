@@ -3,7 +3,7 @@ import { Wrapper, StyledInput, SmallWrapper } from './HeroSection.styles'
 
 const HeroSection = () => {
   return (
-    <Wrapper>
+    <Wrapper id="hero">
       <SmallWrapper>
         <h1>The cat and the hat dosent.</h1>
       </SmallWrapper>

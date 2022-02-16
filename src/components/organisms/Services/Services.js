@@ -30,7 +30,7 @@ const Services = () => {
   }, [inView, isFinished])
 
   return (
-    <Wrapper ref={ref}>
+    <Wrapper ref={ref} id="services">
       <Bar text="Usługi" />
       <Container>
         <motion.div custom={0} animate={animationFromLeft}>

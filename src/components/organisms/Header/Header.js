@@ -24,7 +24,9 @@ const Header = ({ isOpen, toggleMenu }) => {
 
   return (
     <Wrapper isScrolled={isScrolled}>
-      <StyledLogo isScrolled={isScrolled}>logo.</StyledLogo>
+      <StyledLogo to="/" isScrolled={isScrolled}>
+        logo.
+      </StyledLogo>
       <DesktopMenu isScrolled={isScrolled} />
       <HamburgerButton animate={{ scale: 1 }} isScrolled={isScrolled} onClick={toggleMenu}>
         {isOpen ? (

@@ -8,7 +8,7 @@ import { Wrapper, SingleRealization, StyledTitle, ImgWrapper, FirstDescription, 
 
 const Portfolio = () => {
   return (
-    <Wrapper>
+    <Wrapper id="portfolio">
       <Bar text="realizacje" />
       <SingleRealization>
         <StyledTitle>01 / PROJECT NAME</StyledTitle>

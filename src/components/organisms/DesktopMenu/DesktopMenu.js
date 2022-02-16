@@ -25,9 +25,9 @@ const DesktopMenu = () => {
 
   return (
     <StyledMenu isScrolled={isScrolled}>
-      <li>o mnie</li>
-      <li>usługi</li>
-      <li>realizacje</li>
+      <li onClick={() => scrollTo('#hero')}>o mnie</li>
+      <li onClick={() => scrollTo('#services')}>usługi</li>
+      <li onClick={() => scrollTo('#portfolio')}>realizacje</li>
       <li onClick={() => scrollTo('#contact')}>kontakt</li>
     </StyledMenu>
   )
