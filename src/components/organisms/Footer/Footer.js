@@ -8,7 +8,7 @@ const Footer = () => {
   }
 
   return (
-    <Wrapper>
+    <Wrapper id="footer">
       <SocialIcons />
       <StyledCopyright>@2022 Jan Kowalski All Rights Reserved.</StyledCopyright>
 

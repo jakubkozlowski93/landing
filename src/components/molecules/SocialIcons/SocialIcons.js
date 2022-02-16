@@ -7,6 +7,7 @@ const Wrapper = styled.footer`
 
   svg {
     margin: 0 20px;
+    cursor: pointer;
   }
 
   .facebook:hover {

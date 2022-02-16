@@ -34,12 +34,11 @@ export const StyledMenu = styled.ul`
     letter-spacing: -0.03em;
     color: ${({ isScrolled }) => (isScrolled ? 'rgb(243, 243, 243)' : `rgb(46, 53, 63)`)};
     text-transform: capitalize;
-    padding: 20px 0;
     cursor: pointer;
     text-align: center;
     font-family: Poppins, sans-serif;
     font-size: 21px;
-    padding: 0 10px;
+    padding: 0 20px;
     position: relative;
 
     :hover::before {
@@ -52,7 +51,12 @@ export const StyledMenu = styled.ul`
       left: -1px;
       z-index: -1;
       opacity: 0.5;
-      animation: ${expand} 0.5s ease;
+      animation: ${expand} 0.4s ease;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
     }
   }
 `

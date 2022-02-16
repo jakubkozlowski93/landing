@@ -7,7 +7,9 @@ const MobileMenu = () => {
       <li>o mnie</li>
       <li>usługi</li>
       <li>realizacje</li>
-      <li>kontakt</li>
+      <li>
+        <a href="#footer">kontakt</a>
+      </li>
     </StyledMenu>
   )
 }
