@@ -16,9 +16,19 @@ const Wrapper = styled.div`
   padding: 0 50px;
   width: 100%;
   margin-bottom: 70px;
+  background-color: red;
 
   div {
-    height: 150px;
+    height: 200px;
+
+    @media (min-width: 600px) {
+      height: 300px;
+    }
+
+    @media (min-width: 800px) {
+      height: 400px;
+    }
+
     img {
       height: 100%;
       width: 100%;

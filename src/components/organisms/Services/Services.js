@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Wrapper, Container, SingleService, StyledTitle, StyledInfo } from './Services.styles'
 import Bar from './../../atoms/Bar/Bar'
 import ServiceIcon from './../../../assets/icons/ServiceIcon.svg'
@@ -6,7 +6,7 @@ import { motion, useAnimation } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 
 const Services = () => {
-  const [isFinished, setIsFinished] = React.useState(false)
+  const [isFinished, setIsFinished] = useState(false)
 
   const { ref, inView } = useInView({
     threshold: 0.2,

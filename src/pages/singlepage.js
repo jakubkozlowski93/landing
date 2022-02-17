@@ -3,14 +3,17 @@ import Layout from '../components/Layout/Layout'
 import styled from 'styled-components'
 import SocialIcons from '../components/molecules/SocialIcons/SocialIcons'
 import image from './../assets/images/realization.png'
-import Carousel from './../components/molecules/Carousel/Carousel'
+import Carousel from '../components/molecules/Carousel/Carousel'
 import { Link } from 'gatsby'
 import { motion } from 'framer-motion'
-import MobileMenu from './../components/organisms/MobileMenu/MobileMenu'
+import MobileMenu from '../components/organisms/MobileMenu/MobileMenu'
+import image1 from './../assets/images/realization1.png'
+import image2 from './../assets/images/realization2.png'
+import image3 from './../assets/images/realization3.png'
 
 const Wrapper = styled.div`
-  padding: 50px;
-  width: 100%;
+  padding: 0 50px 40px 59px;
+  /* width: 100%; */
   margin-top: 20px;
   display: flex;
   flex-direction: column;
@@ -24,18 +27,41 @@ const StyledTitle = styled.h1`
   font-family: Inter, sans-serif;
   font-weight: 500;
   font-size: 18px;
-  padding-bottom: 10px;
-  text-align: right;
+  padding-bottom: 15px;
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
 `
 
-const ImgWrapper = styled.div``
+const ImgWrapper = styled.div`
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+`
 
-const StyledDescription = styled.p`
+const FirstDescription = styled.p`
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  line-height: 131.5%;
+  letter-spacing: 0.01em;
+  color: #606060;
+  grid: 2/3;
+  grid-column: 1/2;
+  font-weight: 600;
+`
+
+const SecondDescription = styled.p`
   font-family: Inter, sans-serif;
   font-size: 14px;
   line-height: 121.5%;
   letter-spacing: 0.01em;
   color: #606060;
+  margin: 0 0 30px 0;
+  font-size: 13px;
+  font-weight: 500;
+  text-align: justify;
 `
 
 const BackHomeWrapper = styled.div`
@@ -59,17 +85,25 @@ const Singlepage = () => {
           <Wrapper>
             <StyledTitle>01 / PROJECT NAME</StyledTitle>
             <ImgWrapper>
-              <img src={image} alt="Single realization" />
+              <img src={image1} alt="Single realization" />
             </ImgWrapper>
-            <StyledDescription>
+            <FirstDescription>
               Sculpted in ZBrush, Retopologized and UVs done in Maya, Textured in Mari, Rendered using Arnold.
-              <br />
-              <br />
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto sint aperiam deleniti ratione nobis, impedit in modi corrupti non
-              libero distinctio incidunt neque. Fugit, consequatur exercitationem maxime eaque repudiandae esse.
-            </StyledDescription>
+              <SecondDescription>
+                <br />
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto sint aperiam deleniti ratione nobis, impedit in modi corrupti non
+                libero distinctio incidunt neque. Fugit, consequatur exercitationem maxime eaque repudiandae esse.
+              </SecondDescription>
+            </FirstDescription>
+            <Carousel />
+            <SecondDescription>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat quas ex aspernatur ducimus. Quas tempora, nisi accusamus ex aut
+              doloribus. Sit facilis doloribus nobis perferendis iste ea? Reprehenderit, maiores natus! Necessitatibus sint fugiat a quo quod officia
+              repellat voluptas fuga error distinctio, amet veritatis cum magnam dolor eligendi molestias aut voluptate non magni illo neque
+              voluptatem ullam. Eum, quaerat sit.
+            </SecondDescription>
           </Wrapper>
-          <Carousel />
+
           <SocialIcons />
           <Link to="/">
             <BackHomeWrapper>

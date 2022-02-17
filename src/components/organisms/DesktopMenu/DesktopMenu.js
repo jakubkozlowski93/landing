@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { StyledMenu } from './DesktopMenu.styles'
-import Footer from './../Footer/Footer'
 import scrollTo from 'gatsby-plugin-smoothscroll'
 
 const DesktopMenu = () => {
-  console.log(Footer)
   const [scrollPosition, setScrollPosition] = useState(0)
   const [isScrolled, setIsScrolled] = useState(false)
 

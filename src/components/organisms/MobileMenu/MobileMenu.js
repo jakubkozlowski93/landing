@@ -1,15 +1,14 @@
 import React from 'react'
 import { StyledMenu } from './MobileMenu.styles'
+import scrollTo from 'gatsby-plugin-smoothscroll'
 
-const MobileMenu = () => {
+const MobileMenu = ({ closeMenu }) => {
   return (
     <StyledMenu>
-      <li>o mnie</li>
-      <li>usługi</li>
-      <li>realizacje</li>
-      <li>
-        <a href="#footer">kontakt</a>
-      </li>
+      <li onClick={() => scrollTo('#hero')}>o mnie</li>
+      <li onClick={() => scrollTo('#services')}>usługi</li>
+      <li onClick={() => scrollTo('#portfolio')}>realizacje</li>
+      <li onClick={() => scrollTo('#contact')}>kontakt</li>
     </StyledMenu>
   )
 }
