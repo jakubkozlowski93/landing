@@ -16,7 +16,7 @@ import {
   Carousel2,
   AdditionalDescription,
   BackHomeWrapper,
-} from './singlepage.styles'
+} from './../components/SinglePageStyles/singlepage.styles'
 
 const data = [
   {

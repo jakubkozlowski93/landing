@@ -14,6 +14,7 @@ export const Wrapper = styled.div`
     grid-template-rows: 6;
     column-gap: 50px;
     width: 80%;
+    margin: 0 auto;
   }
 
   @media (min-width: 1300px) {
