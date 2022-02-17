@@ -1,75 +1,22 @@
 import React, { useState } from 'react'
 import Layout from '../components/Layout/Layout'
-import styled from 'styled-components'
 import SocialIcons from '../components/molecules/SocialIcons/SocialIcons'
-import image from './../assets/images/realization.png'
 import Carousel from '../components/molecules/Carousel/Carousel'
 import { Link } from 'gatsby'
 import { motion } from 'framer-motion'
 import MobileMenu from '../components/organisms/MobileMenu/MobileMenu'
 import image1 from './../assets/images/realization1.png'
-import image2 from './../assets/images/realization2.png'
-import image3 from './../assets/images/realization3.png'
-
-const Wrapper = styled.div`
-  padding: 0 50px 40px 59px;
-  /* width: 100%; */
-  margin-top: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-`
-
-const StyledTitle = styled.h1`
-  margin: 0;
-  padding: 0;
-  font-family: Inter, sans-serif;
-  font-weight: 500;
-  font-size: 18px;
-  padding-bottom: 15px;
-  display: flex;
-  justify-content: flex-start;
-  width: 100%;
-`
-
-const ImgWrapper = styled.div`
-  img {
-    display: block;
-    width: 100%;
-    height: 100%;
-  }
-`
-
-const FirstDescription = styled.p`
-  font-family: Inter, sans-serif;
-  font-size: 14px;
-  line-height: 131.5%;
-  letter-spacing: 0.01em;
-  color: #606060;
-  grid: 2/3;
-  grid-column: 1/2;
-  font-weight: 600;
-`
-
-const SecondDescription = styled.p`
-  font-family: Inter, sans-serif;
-  font-size: 14px;
-  line-height: 121.5%;
-  letter-spacing: 0.01em;
-  color: #606060;
-  margin: 0 0 30px 0;
-  font-size: 13px;
-  font-weight: 500;
-  text-align: justify;
-`
-
-const BackHomeWrapper = styled.div`
-  margin-top: 30px;
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-`
+import Slider from 'react-slick'
+import {
+  Wrapper,
+  StyledTitle,
+  ImgWrapper,
+  FirstDescription,
+  SecondDescription,
+  Carousel2,
+  AdditionalDescription,
+  BackHomeWrapper,
+} from './singlepage.styles'
 
 const Singlepage = () => {
   const toggleMenu = () => {
@@ -77,6 +24,14 @@ const Singlepage = () => {
   }
 
   const [isOpen, setIsOpen] = useState(true)
+
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+  }
 
   return (
     <Layout toggleMenu={toggleMenu} isOpen={isOpen}>
@@ -96,12 +51,42 @@ const Singlepage = () => {
               </SecondDescription>
             </FirstDescription>
             <Carousel />
+            <Carousel2>
+              <Slider {...settings}>
+                <div>
+                  <img src="https://source.unsplash.com/random" alt="Photo" />
+                </div>
+                <div>
+                  <img src="https://source.unsplash.com/random" alt="Photo" />
+                </div>
+                <div>
+                  <img src="https://source.unsplash.com/random" alt="Photo" />
+                </div>
+                <div>
+                  <img src="https://source.unsplash.com/random" alt="Photo" />
+                </div>
+                <div>
+                  <img src="https://source.unsplash.com/random" alt="Photo" />
+                </div>
+              </Slider>
+            </Carousel2>
             <SecondDescription>
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat quas ex aspernatur ducimus. Quas tempora, nisi accusamus ex aut
               doloribus. Sit facilis doloribus nobis perferendis iste ea? Reprehenderit, maiores natus! Necessitatibus sint fugiat a quo quod officia
               repellat voluptas fuga error distinctio, amet veritatis cum magnam dolor eligendi molestias aut voluptate non magni illo neque
               voluptatem ullam. Eum, quaerat sit.
             </SecondDescription>
+            <AdditionalDescription>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, quaerat dolores nisi cumque iure maiores adipisci quisquam aliquid!
+              Nemo doloribus, porro reprehenderit eaque eius praesentium deserunt temporibus voluptatibus explicabo perspiciatis. Ut, at. Officiis,
+              laboriosam quibusdam in nihil ex perferendis ab a labore recusandae ullam consequuntur sapiente repellat ratione, est, nemo pariatur
+              odit odio? Cum dolor eum perferendis minus illo eaque! Sit, nam dicta sed minus sint soluta odio architecto doloremque in porro delectus
+              aut repellendus error sapiente rem fuga adipisci perspiciatis autem maiores veritatis recusandae. Harum quos aperiam dolorem officiis.
+              Dolorem eius illum accusamus voluptas, aperiam atque itaque? Eius, animi est. Veritatis explicabo accusamus nesciunt harum fuga ea
+              provident delectus autem incidunt, est temporibus excepturi voluptatum, reiciendis sequi sunt illo! Natus quo nisi maiores rerum dolore
+              recusandae similique. Esse nisi officia fuga quo cumque? Blanditiis saepe asperiores, dolore cum qui et, maiores delectus nisi nesciunt
+              odit quidem minus? Libero, sequi!
+            </AdditionalDescription>
           </Wrapper>
 
           <SocialIcons />

@@ -4,19 +4,14 @@ import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import Slider from 'react-slick'
 
-const settings = {
-  dots: true,
-  infinite: true,
-  speed: 500,
-  slidesToShow: 1,
-  slidesToScroll: 1,
-}
-
 const Wrapper = styled.div`
   padding: 0 50px;
   width: 100%;
   margin-bottom: 70px;
-  background-color: red;
+
+  @media (min-width: 1000px) {
+    display: none;
+  }
 
   div {
     height: 200px;
@@ -38,6 +33,14 @@ const Wrapper = styled.div`
 `
 
 const Carousel = () => {
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  }
+
   return (
     <Wrapper>
       <Slider {...settings}>
