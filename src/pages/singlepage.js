@@ -18,6 +18,18 @@ import {
   BackHomeWrapper,
 } from './singlepage.styles'
 
+const data = [
+  {
+    id: 123,
+    title: '01 / PROJECT NAME',
+    firstDescription: 'Sculpted in ZBrush, Retopologized and UVs done in Maya, Textured in Mari, Rendered using Arnold.',
+    secondDescription:
+      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto sint aperiam deleniti ratione nobis, impedit in modi corrupti non libero distinctio incidunt neque. Fugit, consequatur exercitationem maxime eaque repudiandae esse. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto sint aperiam deleniti ratione nobis, impedit in modi corrupti non libero distinctio incidunt neque. Fugit, consequatur exercitationem maxime eaque repudiandae esse.',
+    additionalDescription:
+      'Lorem ipsum,  sit amet consectetur adipisicing elit. Architecto sint aperiam deleniti ratione nobis, impedit in modi corrupti non libero distinctio incidunt neque. Fugit, consequatur exercitationem maxime eaque repudiandae esse.,additionalDescription: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, quaerat dolores nisi cumque iure maiores adipisci quisquam aliquid! Nemo doloribus, porro reprehenderit eaque eius praesentium deserunt temporibus voluptatibus explicabo perspiciatis. Ut, at. Officiis, laboriosam quibusdam in nihil ex perferendis ab a labore recusandae ullam consequuntur sapiente repellat ratione, est, nemo pariatuodit odio? Cum dolor eum perferendis minus illo eaque! Sit, nam dicta sed minus sint soluta odio architecto doloremque in porro delectus aut repellendus error sapiente rem fuga adipisci perspiciatis autem maiores veritatis recusandae. Harum quos aperiam dolorem officiis. Dolorem eius illum accusamus voluptas, aperiam atque itaque? Eius, animi est. Veritatis explicabo accusamus nesciunt harum fuga ea provident delectus autem incidunt, est temporibus excepturi voluptatum, reiciendis sequi sunt illo! Natus quo nisi maiores rerum dolore recusandae similique. Esse nisi officia fuga quo cumque? Blanditiis saepe asperiores, dolore cum qui et, maiores delectus nisi nesciunt odit quidem minus? Libero, sequi!',
+  },
+]
+
 const Singlepage = () => {
   const toggleMenu = () => {
     setIsOpen(!isOpen)
@@ -37,57 +49,37 @@ const Singlepage = () => {
     <Layout toggleMenu={toggleMenu} isOpen={isOpen}>
       {isOpen ? (
         <>
-          <Wrapper>
-            <StyledTitle>01 / PROJECT NAME</StyledTitle>
-            <ImgWrapper>
-              <img src={image1} alt="Single realization" />
-            </ImgWrapper>
-            <FirstDescription>
-              Sculpted in ZBrush, Retopologized and UVs done in Maya, Textured in Mari, Rendered using Arnold.
-              <SecondDescription>
-                <br />
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto sint aperiam deleniti ratione nobis, impedit in modi corrupti non
-                libero distinctio incidunt neque. Fugit, consequatur exercitationem maxime eaque repudiandae esse.
-              </SecondDescription>
-            </FirstDescription>
-            <Carousel />
-            <Carousel2>
-              <Slider {...settings}>
-                <div>
-                  <img src="https://source.unsplash.com/random" alt="Photo" />
-                </div>
-                <div>
-                  <img src="https://source.unsplash.com/random" alt="Photo" />
-                </div>
-                <div>
-                  <img src="https://source.unsplash.com/random" alt="Photo" />
-                </div>
-                <div>
-                  <img src="https://source.unsplash.com/random" alt="Photo" />
-                </div>
-                <div>
-                  <img src="https://source.unsplash.com/random" alt="Photo" />
-                </div>
-              </Slider>
-            </Carousel2>
-            <SecondDescription>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat quas ex aspernatur ducimus. Quas tempora, nisi accusamus ex aut
-              doloribus. Sit facilis doloribus nobis perferendis iste ea? Reprehenderit, maiores natus! Necessitatibus sint fugiat a quo quod officia
-              repellat voluptas fuga error distinctio, amet veritatis cum magnam dolor eligendi molestias aut voluptate non magni illo neque
-              voluptatem ullam. Eum, quaerat sit.
-            </SecondDescription>
-            <AdditionalDescription>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, quaerat dolores nisi cumque iure maiores adipisci quisquam aliquid!
-              Nemo doloribus, porro reprehenderit eaque eius praesentium deserunt temporibus voluptatibus explicabo perspiciatis. Ut, at. Officiis,
-              laboriosam quibusdam in nihil ex perferendis ab a labore recusandae ullam consequuntur sapiente repellat ratione, est, nemo pariatur
-              odit odio? Cum dolor eum perferendis minus illo eaque! Sit, nam dicta sed minus sint soluta odio architecto doloremque in porro delectus
-              aut repellendus error sapiente rem fuga adipisci perspiciatis autem maiores veritatis recusandae. Harum quos aperiam dolorem officiis.
-              Dolorem eius illum accusamus voluptas, aperiam atque itaque? Eius, animi est. Veritatis explicabo accusamus nesciunt harum fuga ea
-              provident delectus autem incidunt, est temporibus excepturi voluptatum, reiciendis sequi sunt illo! Natus quo nisi maiores rerum dolore
-              recusandae similique. Esse nisi officia fuga quo cumque? Blanditiis saepe asperiores, dolore cum qui et, maiores delectus nisi nesciunt
-              odit quidem minus? Libero, sequi!
-            </AdditionalDescription>
-          </Wrapper>
+          {data.map(el => (
+            <Wrapper key={el.id}>
+              <StyledTitle>{el.title}</StyledTitle>
+              <ImgWrapper>
+                <img src={image1} alt="Single realization" />
+              </ImgWrapper>
+              <FirstDescription>{el.firstDescription}</FirstDescription>
+              <SecondDescription>{el.secondDescription}</SecondDescription>
+              <Carousel />
+              <Carousel2>
+                <Slider {...settings}>
+                  <div>
+                    <img src="https://source.unsplash.com/random" alt="Photo" />
+                  </div>
+                  <div>
+                    <img src="https://source.unsplash.com/random" alt="Photo" />
+                  </div>
+                  <div>
+                    <img src="https://source.unsplash.com/random" alt="Photo" />
+                  </div>
+                  <div>
+                    <img src="https://source.unsplash.com/random" alt="Photo" />
+                  </div>
+                  <div>
+                    <img src="https://source.unsplash.com/random" alt="Photo" />
+                  </div>
+                </Slider>
+              </Carousel2>
+              <AdditionalDescription>{el.additionalDescription}</AdditionalDescription>
+            </Wrapper>
+          ))}
 
           <SocialIcons />
           <Link to="/">
