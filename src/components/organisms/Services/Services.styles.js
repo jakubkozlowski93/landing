@@ -25,7 +25,7 @@ export const Container = styled.div`
 export const SingleService = styled.div`
   width: 100%;
   position: relative;
-  padding: 25px 0;
+  padding: 25px 40px 0 30px;
 
   img {
     position: absolute;
@@ -33,6 +33,7 @@ export const SingleService = styled.div`
 
   @media (min-width: 1000px) {
     width: 400px;
+    padding: 25px 0;
   }
 `
 

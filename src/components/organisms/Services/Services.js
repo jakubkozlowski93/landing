@@ -24,7 +24,7 @@ const Services = () => {
     }
     if (!inView && isFinished !== true) {
       animationFromLeft.start({
-        x: '-100vh',
+        x: '-100vw',
       })
     }
   }, [inView, isFinished])
@@ -33,17 +33,6 @@ const Services = () => {
     <Wrapper ref={ref} id="services">
       <Bar text="Usługi" />
       <Container>
-        <motion.div custom={0} animate={animationFromLeft}>
-          <SingleService>
-            <img src={ServiceIcon} alt="Service icon" />
-            <StyledTitle>projekt</StyledTitle>
-            <StyledInfo>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa, expedita ab aliquam atque consequuntur id possimus, eum quod incidunt
-              corrupti quia iure dicta.
-            </StyledInfo>
-          </SingleService>
-        </motion.div>
-
         <motion.div custom={1} animate={animationFromLeft}>
           <SingleService>
             <img src={ServiceIcon} alt="Service icon" />
@@ -67,6 +56,17 @@ const Services = () => {
         </motion.div>
 
         <motion.div custom={3} animate={animationFromLeft}>
+          <SingleService>
+            <img src={ServiceIcon} alt="Service icon" />
+            <StyledTitle>projekt</StyledTitle>
+            <StyledInfo>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa, expedita ab aliquam atque consequuntur id possimus, eum quod incidunt
+              corrupti quia iure dicta.
+            </StyledInfo>
+          </SingleService>
+        </motion.div>
+
+        <motion.div custom={4} animate={animationFromLeft}>
           <SingleService>
             <img src={ServiceIcon} alt="Service icon" />
             <StyledTitle>projekt</StyledTitle>
