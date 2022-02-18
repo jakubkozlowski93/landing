@@ -13,12 +13,12 @@ export const Wrapper = styled.div`
 `
 
 export const Container = styled.div`
-  padding: 0 50px;
   @media (min-width: 1000px) {
     display: grid;
     grid-template-columns: 50% 50%;
     grid-template-rows: 2;
     grid-auto-flow: row;
+    column-gap: 50px;
   }
 `
 

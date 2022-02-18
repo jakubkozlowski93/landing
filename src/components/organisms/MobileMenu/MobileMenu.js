@@ -2,7 +2,7 @@ import React from 'react'
 import { StyledMenu } from './MobileMenu.styles'
 import scrollTo from 'gatsby-plugin-smoothscroll'
 
-const MobileMenu = ({ closeMenu }) => {
+const MobileMenu = () => {
   return (
     <StyledMenu>
       <li onClick={() => scrollTo('#hero')}>o mnie</li>
