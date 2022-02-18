@@ -113,7 +113,7 @@ export const Carousel2 = styled.div`
     height: 250px;
     margin-top: 40px;
     overflow: hidden;
-    padding: 0 40px 40px 40px;
+    padding: 0 0 40px 0;
   }
 
   div {
@@ -122,6 +122,7 @@ export const Carousel2 = styled.div`
     width: 100%;
     display: flex;
     justify-content: center;
+    cursor: pointer;
 
     img {
       display: block;

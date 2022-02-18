@@ -5,7 +5,6 @@ import 'slick-carousel/slick/slick-theme.css'
 import Slider from 'react-slick'
 
 const Wrapper = styled.div`
-  padding: 0 50px;
   width: 100%;
   margin-bottom: 70px;
 
@@ -15,6 +14,7 @@ const Wrapper = styled.div`
 
   div {
     height: 200px;
+    cursor: pointer;
 
     @media (min-width: 600px) {
       height: 300px;
