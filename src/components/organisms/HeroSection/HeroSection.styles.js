@@ -53,16 +53,16 @@ export const DescriptionWrapper = styled.div`
   display: none;
 
   @media (min-width: 1000px) {
-    max-height: 375px;
     grid-column: 1/2;
     grid-row: 1/2;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: flex-start;
     padding: 0 20px;
-    max-width: 520px;
+    max-width: 370px;
     max-height: 350px;
+    margin-bottom: 20px;
   }
 `
 
@@ -73,6 +73,7 @@ export const StyledTitle = styled.h1`
     font-style: normal;
     font-size: 52px;
     margin: 0;
+    text-transform: capitalize;
   }
 `
 
@@ -100,10 +101,9 @@ export const SmallDescription = styled.p`
     font-family: Poppins, sans-serif;
     weight: 400;
     font-style: normal;
-    font-size: 20px;
-    line-height: 30px;
+    font-size: 18px;
+    line-height: 20px;
     opacity: 0.6;
-    text-align: center;
   }
 `
 
@@ -117,6 +117,7 @@ export const ImgWrapper = styled.div`
     max-width: 520px;
     max-height: 375px;
     grid-row: 1/2;
+    margin-bottom: 20px;
 
     img {
       display: block;

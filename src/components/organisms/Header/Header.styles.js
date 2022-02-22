@@ -14,6 +14,10 @@ export const Wrapper = styled.nav`
   opacity: 0.8;
   border-radius: 4px;
   z-index: 2;
+
+  @media (min-width: 1500px) {
+    width: 80%;
+  }
 `
 export const HamburgerButton = styled.div`
   cursor: pointer;

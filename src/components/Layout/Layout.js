@@ -9,22 +9,22 @@ const ChildrensContainer = styled.div`
   overflow-x: hidden;
 `
 
-// const Wrapper = styled.div`
-//   display: flex;
-//   flex-direction: column;
-//   width: 80%;
-//   height: 100%;
-//   align-items: center;
-//   margin: 0 auto;
-// `
+const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  align-items: center;
+  margin: 0 auto;
+  background: #fcfafa;
+`
 
 const Layout = ({ children, isOpen, toggleMenu }) => {
   return (
-    <>
+    <Wrapper>
       <GlobalStyle />
       <Header isOpen={isOpen} toggleMenu={toggleMenu} />
       <ChildrensContainer>{children}</ChildrensContainer>
-    </>
+    </Wrapper>
   )
 }
 
