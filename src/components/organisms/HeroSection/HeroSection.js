@@ -15,7 +15,9 @@ const HeroSection = () => {
       </StyledInput>
       <DescriptionWrapper>
         <StyledTitle>company.</StyledTitle>
-        <SmallTitle>create your own style</SmallTitle>
+        <SmallTitle>
+          <h2>create your own style</h2>
+        </SmallTitle>
         <SmallDescription>A style for every story, get the latest style here at an inexpensive price.</SmallDescription>
         <SmallDescription>A style for every story, get the latest style.</SmallDescription>
       </DescriptionWrapper>

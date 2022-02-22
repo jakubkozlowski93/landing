@@ -1,6 +1,21 @@
 import styled, { keyframes } from 'styled-components'
 import background from './../../../assets/images/background.png'
 
+const typing = keyframes`
+ from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+`
+
+const blinkCaret = keyframes`
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
+
+`
+
 export const Wrapper = styled.div`
   width: 100vw;
   height: 100vh;
@@ -14,14 +29,23 @@ export const Wrapper = styled.div`
   margin-top: 20px;
 
   @media (min-width: 1000px) {
-    height: calc(100vh - 70px);
+    height: calc(100vh - 100px);
     width: 100%;
     display: grid;
     grid-template-columns: 5;
-    grid-template-rows: 1;
+    grid-template-rows: 1fr 75px;
     background: none;
-    padding: 0;
-    margin: 0;
+    margin: 0 auto;
+    padding: 0 50px;
+  }
+
+  @media (min-width: 1200px) {
+    height: calc(100vh - 100px);
+    padding: 100px 0;
+  }
+
+  @media (min-width: 1200px) {
+    padding: 100px 0;
   }
 `
 
@@ -36,10 +60,11 @@ export const DescriptionWrapper = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
+    padding: 0 20px;
+    max-width: 520px;
+    max-height: 350px;
   }
 `
-
-////
 
 export const StyledTitle = styled.h1`
   @media (min-width: 1000px) {
@@ -47,19 +72,26 @@ export const StyledTitle = styled.h1`
     weight: 700;
     font-style: normal;
     font-size: 52px;
-    /* line-height: 108px; */
     margin: 0;
   }
 `
 
-export const SmallTitle = styled.h2`
+export const SmallTitle = styled.div`
   @media (min-width: 1000px) {
-    font-family: Poppins, sans-serif;
-    weight: 600;
-    font-style: normal;
-    font-size: 22px;
-    line-height: 33px;
-    text-transform: uppercase;
+    overflow: hidden;
+    white-space: nowrap;
+
+    h2 {
+      animation: ${typing} 2s steps(30, end), ${blinkCaret} 0.5s step-end infinite;
+      overflow: hidden;
+      border-right: 0.15em solid orange;
+      font-family: Poppins, sans-serif;
+      font-weight: 600;
+      font-style: normal;
+      font-size: 22px;
+      line-height: 33px;
+      text-transform: uppercase;
+    }
   }
 `
 
@@ -71,6 +103,7 @@ export const SmallDescription = styled.p`
     font-size: 20px;
     line-height: 30px;
     opacity: 0.6;
+    text-align: center;
   }
 `
 
@@ -79,8 +112,8 @@ export const ImgWrapper = styled.div`
 
   @media (min-width: 1000px) {
     display: block;
-    grid-column: 3/6;
-    /* height: 60vh; */
+    grid-column: 2/6;
+    grid-row: 1/2;
     max-width: 520px;
     max-height: 375px;
     grid-row: 1/2;
@@ -92,7 +125,6 @@ export const ImgWrapper = styled.div`
     }
   }
 `
-///////////////////
 export const StyledInput = styled.form`
   background: #dbe5f4;
   border-radius: 100px;
@@ -105,7 +137,12 @@ export const StyledInput = styled.form`
   text-align: center;
 
   @media (min-width: 1000px) {
-    display: none;
+    grid-row: 2/3;
+    grid-column: 1/6;
+    margin: 0 auto;
+    width: 380px;
+    justify-content: space-between;
+    padding: 0 15px 0 25px;
   }
 
   input[type='text'] {
@@ -115,7 +152,7 @@ export const StyledInput = styled.form`
     line-height: 21px;
     background: inherit;
     width: 140px;
-    opacity: 0.6;
+    opacity: 0.7;
   }
 
   input[type='button'] {
@@ -132,21 +169,6 @@ export const StyledInput = styled.form`
     line-height: 15px;
     letter-spacing: 0.5px;
   }
-`
-
-const typing = keyframes`
- from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
-`
-
-const blinkCaret = keyframes`
-  from, to { border-color: transparent }
-  50% { border-color: orange; }
-
 `
 
 export const SmallWrapper = styled.div`
