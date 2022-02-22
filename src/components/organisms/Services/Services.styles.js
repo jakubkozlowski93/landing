@@ -7,9 +7,9 @@ export const Wrapper = styled.div`
   justify-content: center;
   margin: 0 auto;
 
-  @media (min-width: 1000px) {
+  /* @media (min-width: 1000px) {
     margin: 60px 0;
-  }
+  } */
 `
 
 export const Container = styled.div`
