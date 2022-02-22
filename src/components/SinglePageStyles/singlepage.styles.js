@@ -134,8 +134,6 @@ export const Carousel2 = styled.div`
 `
 
 export const AdditionalDescription = styled(SecondDescription)`
-  display: none;
-
   @media (min-width: 1000px) {
     display: block;
     grid-row: 6/7;
