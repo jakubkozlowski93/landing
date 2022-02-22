@@ -12,8 +12,87 @@ export const Wrapper = styled.div`
   background-size: cover;
   background-position: center, center;
   margin-top: 20px;
+
+  @media (min-width: 1000px) {
+    height: calc(100vh - 70px);
+    width: 100%;
+    display: grid;
+    grid-template-columns: 5;
+    grid-template-rows: 1;
+    background: none;
+    padding: 0;
+    margin: 0;
+  }
 `
 
+export const DescriptionWrapper = styled.div`
+  display: none;
+
+  @media (min-width: 1000px) {
+    max-height: 375px;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+`
+
+////
+
+export const StyledTitle = styled.h1`
+  @media (min-width: 1000px) {
+    font-family: Poppins, sans-serif;
+    weight: 700;
+    font-style: normal;
+    font-size: 52px;
+    /* line-height: 108px; */
+    margin: 0;
+  }
+`
+
+export const SmallTitle = styled.h2`
+  @media (min-width: 1000px) {
+    font-family: Poppins, sans-serif;
+    weight: 600;
+    font-style: normal;
+    font-size: 22px;
+    line-height: 33px;
+    text-transform: uppercase;
+  }
+`
+
+export const SmallDescription = styled.p`
+  @media (min-width: 1000px) {
+    font-family: Poppins, sans-serif;
+    weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    line-height: 30px;
+    opacity: 0.6;
+  }
+`
+
+export const ImgWrapper = styled.div`
+  display: none;
+
+  @media (min-width: 1000px) {
+    display: block;
+    grid-column: 3/6;
+    /* height: 60vh; */
+    max-width: 520px;
+    max-height: 375px;
+    grid-row: 1/2;
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+`
+///////////////////
 export const StyledInput = styled.form`
   background: #dbe5f4;
   border-radius: 100px;
@@ -24,6 +103,10 @@ export const StyledInput = styled.form`
   align-items: center;
   padding: 0 10px 0 20px;
   text-align: center;
+
+  @media (min-width: 1000px) {
+    display: none;
+  }
 
   input[type='text'] {
     outline: none;
@@ -74,6 +157,10 @@ export const SmallWrapper = styled.div`
   margin: 0 auto;
   letter-spacing: 0.15em;
   font-size: 11px;
+
+  @media (min-width: 1000px) {
+    display: none;
+  }
 
   h1 {
     animation: ${typing} 2s steps(30, end), ${blinkCaret} 0.5s step-end infinite;
