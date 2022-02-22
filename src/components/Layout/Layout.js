@@ -12,10 +12,13 @@ const ChildrensContainer = styled.div`
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
-  width: 80%;
   align-items: center;
   margin: 0 auto;
-  background: #fcfafa;
+
+  @media (min-width: 1500px) {
+    width: 80%;
+    background: #fcfafa;
+  }
 `
 
 const Layout = ({ children, isOpen, toggleMenu }) => {
