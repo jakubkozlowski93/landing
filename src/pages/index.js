@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import SocialIcons from './../components/molecules/SocialIcons/SocialIcons'
+import SocialIcons from '../components/molecules/SocialIcons/SocialIcons'
 import HeroSection from '../components/organisms/HeroSection/HeroSection'
 import Services from '../components/organisms/Services/Services'
 import Footer from './../components/organisms/Footer/Footer'

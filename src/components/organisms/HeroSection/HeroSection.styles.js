@@ -74,6 +74,17 @@ export const StyledTitle = styled.h1`
     font-size: 52px;
     margin: 0;
     text-transform: capitalize;
+    position: relative;
+
+    ::before {
+      position: absolute;
+      content: '';
+      width: 60%;
+      height: 60%;
+      background: #ddd4c9;
+      z-index: -1;
+      left: -15px;
+    }
   }
 `
 
@@ -114,8 +125,8 @@ export const ImgWrapper = styled.div`
     display: block;
     grid-column: 2/6;
     grid-row: 1/2;
-    max-width: 520px;
-    max-height: 375px;
+    max-width: 500px;
+    max-height: 350px;
     grid-row: 1/2;
     margin-bottom: 20px;
 
