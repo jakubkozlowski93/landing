@@ -26,7 +26,7 @@ const Portfolio = () => {
         </ImgWrapper>
         <FirstDescription>Sculpted in ZBrush, Retopologized and UVs done in Maya, Textured in Mari, Rendered using Arnold.</FirstDescription>
         <SecondDescription>Sculpted in ZBrush, Retopologized and UVs done in Maya, Textured in Mari, Rendered using Arnold.</SecondDescription>
-        <StyledLink href="#">More shots from this project ↗</StyledLink>
+        <StyledLink to="/singlepage">More shots from this project ↗</StyledLink>
       </SingleRealization>
       <SingleRealization>
         <StyledTitle>03 / PROJECT NAME</StyledTitle>
@@ -35,7 +35,7 @@ const Portfolio = () => {
         </ImgWrapper>
         <FirstDescription>Sculpted in ZBrush, Retopologized and UVs done in Maya, Textured in Mari, Rendered using Arnold.</FirstDescription>
         <SecondDescription>Sculpted in ZBrush, Retopologized and UVs done in Maya, Textured in Mari, Rendered using Arnold.</SecondDescription>
-        <StyledLink href="#">More shots from this project ↗</StyledLink>
+        <StyledLink to="/singlepage">More shots from this project ↗</StyledLink>
       </SingleRealization>
     </Wrapper>
   )
