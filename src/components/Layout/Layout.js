@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import GlobalStyle from './../../styles/GlobalStyle'
 import Header from '../../components/organisms/Header/Header'
+import AppProviders from '../../providers/AppProviders'
 
 const ChildrensContainer = styled.div`
   width: 100%;
@@ -21,12 +22,15 @@ const Wrapper = styled.div`
   }
 `
 
-const Layout = ({ children, isOpen, toggleMenu }) => {
+const Layout = ({ children }) => {
   return (
     <Wrapper>
       <GlobalStyle />
-      <Header isOpen={isOpen} toggleMenu={toggleMenu} />
-      <ChildrensContainer>{children}</ChildrensContainer>
+      <AppProviders>
+        <Header />
+
+        <ChildrensContainer>{children}</ChildrensContainer>
+      </AppProviders>
     </Wrapper>
   )
 }

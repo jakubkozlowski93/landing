@@ -3,9 +3,14 @@ import { StyledLogo } from '../../atoms/Logo/Logo'
 import DesktopMenu from '../DesktopMenu/DesktopMenu'
 import { Wrapper, HamburgerButton } from './Header.styles'
 
-const Header = ({ isOpen, toggleMenu }) => {
+const Header = () => {
   const [scrollPosition, setScrollPosition] = useState(0)
   const [isScrolled, setIsScrolled] = useState(false)
+  const [isOpen, setIsOpen] = useState(false)
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen)
+  }
 
   useEffect(() => {
     window.addEventListener(
@@ -27,7 +32,7 @@ const Header = ({ isOpen, toggleMenu }) => {
       <StyledLogo to="/" isScrolled={isScrolled}>
         logo.
       </StyledLogo>
-      <DesktopMenu isScrolled={isScrolled} />
+
       <HamburgerButton animate={{ scale: 1 }} isScrolled={isScrolled} onClick={toggleMenu}>
         {isOpen ? (
           <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -47,6 +52,7 @@ const Header = ({ isOpen, toggleMenu }) => {
           </svg>
         )}
       </HamburgerButton>
+      <DesktopMenu isScrolled={isScrolled} isOpen={isOpen} />
     </Wrapper>
   )
 }

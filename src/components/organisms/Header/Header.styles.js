@@ -11,9 +11,8 @@ export const Wrapper = styled.nav`
   background: ${({ isScrolled }) => (isScrolled ? 'rgb(46, 53, 63)' : null)};
   z-index: 2;
   box-shadow: ${({ isScrolled }) => (isScrolled ? `-2px 2px 12px 1px rgba(120, 119, 120, 1)` : 'rgba(149, 157, 165, 0.2) 0px 8px 24px')};
-  opacity: 0.8;
+  opacity: ${({ isScrolled }) => (isScrolled ? '0.8' : '1')};
   border-radius: 4px;
-  z-index: 2;
 
   @media (min-width: 1500px) {
     width: 80%;

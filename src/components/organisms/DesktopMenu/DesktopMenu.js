@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { StyledMenu } from './DesktopMenu.styles'
 import scrollTo from 'gatsby-plugin-smoothscroll'
 
-const DesktopMenu = () => {
+const DesktopMenu = ({ isOpen }) => {
   const [scrollPosition, setScrollPosition] = useState(0)
   const [isScrolled, setIsScrolled] = useState(false)
 
@@ -22,7 +22,7 @@ const DesktopMenu = () => {
   }, [scrollPosition])
 
   return (
-    <StyledMenu isScrolled={isScrolled}>
+    <StyledMenu isScrolled={isScrolled} isOpen={isOpen}>
       <li onClick={() => scrollTo('#hero')}>o mnie</li>
       <li onClick={() => scrollTo('#services')}>usługi</li>
       <li onClick={() => scrollTo('#portfolio')}>realizacje</li>

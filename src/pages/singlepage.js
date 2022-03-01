@@ -4,7 +4,6 @@ import SocialIcons from '../components/molecules/SocialIcons/SocialIcons'
 import Carousel from '../components/molecules/Carousel/Carousel'
 import { Link } from 'gatsby'
 import { motion } from 'framer-motion'
-import MobileMenu from '../components/organisms/MobileMenu/MobileMenu'
 import image1 from './../assets/images/realization1.png'
 import Slider from 'react-slick'
 import {
@@ -96,12 +95,7 @@ const Singlepage = () => {
           </Link>
         </>
       ) : (
-        <>
-          <MobileMenu />
-          <motion.div initial={{ y: '100vh' }} animate={{ y: 0 }} transition={{ type: 'spring', stiffness: 60, delay: 0.2 }}>
-            <SocialIcons />
-          </motion.div>
-        </>
+        <>ss</>
       )}
     </Layout>
   )
