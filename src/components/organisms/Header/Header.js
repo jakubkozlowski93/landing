@@ -51,7 +51,7 @@ const Header = () => {
           </svg>
         )}
       </HamburgerButton>
-      <StyledMenu isOpen={isOpen}>
+      <StyledMenu isOpen={isOpen} isScrolled={isScrolled}>
         <li
           onClick={() => {
             toggleMenu()

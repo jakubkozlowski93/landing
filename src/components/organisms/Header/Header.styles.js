@@ -62,7 +62,8 @@ export const StyledMenu = styled.ul`
   width: 100%;
   position: absolute;
   top: 100px;
-  transform: translateX(${({ isOpen }) => (isOpen ? 'calc(-100% - 2px)' : 0)});
+  transform: translateX(${({ isOpen }) => (isOpen ? 'calc(100%)' : 0)});
+  transition: transform 0.3s ease-in-out;
 
   li {
     font-weight: 500;
