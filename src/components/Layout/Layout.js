@@ -1,12 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
 import GlobalStyle from './../../styles/GlobalStyle'
-import Header from '../../components/organisms/Header/Header'
 import AppProviders from '../../providers/AppProviders'
 
 const ChildrensContainer = styled.div`
   width: 100%;
-  padding: 80px 0px 40px 0px;
+  padding: 0px 0px 40px 0px;
   overflow-x: hidden;
 `
 
@@ -27,8 +26,6 @@ const Layout = ({ children }) => {
     <Wrapper>
       <GlobalStyle />
       <AppProviders>
-        <Header />
-
         <ChildrensContainer>{children}</ChildrensContainer>
       </AppProviders>
     </Wrapper>

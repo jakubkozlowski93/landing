@@ -1,5 +1,5 @@
 import styled, { keyframes } from 'styled-components'
-import background from './../../../assets/images/background.png'
+import background from './../../../assets/images/background.jpg'
 
 const typing = keyframes`
  from {
@@ -26,7 +26,7 @@ export const Wrapper = styled.div`
   background-image: url(${background});
   background-size: cover;
   background-position: center, center;
-  margin-top: 20px;
+  margin-top: 100px;
 
   @media (min-width: 1000px) {
     height: calc(100vh - 100px);
@@ -37,6 +37,7 @@ export const Wrapper = styled.div`
     background: none;
     margin: 0 auto;
     padding: 0 50px;
+    margin-top: 100px;
   }
 
   @media (min-width: 1200px) {

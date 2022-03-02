@@ -1,39 +1,44 @@
 import React, { useEffect, useState } from 'react'
 import { StyledLogo } from '../../atoms/Logo/Logo'
-import DesktopMenu from '../DesktopMenu/DesktopMenu'
-import { Wrapper, HamburgerButton } from './Header.styles'
+import { Wrapper, HamburgerButton, StyledMenu } from './Header.styles'
+import scrollTo from 'gatsby-plugin-smoothscroll'
 
 const Header = () => {
-  const [scrollPosition, setScrollPosition] = useState(0)
-  const [isScrolled, setIsScrolled] = useState(false)
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setISopen] = useState(false)
 
   const toggleMenu = () => {
-    setIsOpen(!isOpen)
+    setISopen(!isOpen)
+    console.log(isOpen)
   }
+  // const [scrollPosition, setScrollPosition] = useState(0)
+  // const [isScrolled, setIsScrolled] = useState(false)
+  // const [isOpen, setIsOpen] = useState(false)
 
-  useEffect(() => {
-    window.addEventListener(
-      'scroll',
-      () => {
-        setScrollPosition(window.scrollY)
-        if (scrollPosition >= 50) {
-          setIsScrolled(true)
-        } else {
-          setIsScrolled(false)
-        }
-      },
-      true
-    )
-  }, [scrollPosition])
+  // const toggleMenu = () => {
+  //   setIsOpen(!isOpen)
+  //   console.log('ok')
+  // }
+
+  // useEffect(() => {
+  //   window.addEventListener(
+  //     'scroll',
+  //     () => {
+  //       setScrollPosition(window.scrollY)
+  //       if (scrollPosition >= 50) {
+  //         setIsScrolled(true)
+  //       } else {
+  //         setIsScrolled(false)
+  //       }
+  //     },
+  //     true
+  //   )
+  // }, [scrollPosition])
 
   return (
-    <Wrapper isScrolled={isScrolled}>
-      <StyledLogo to="/" isScrolled={isScrolled}>
-        logo.
-      </StyledLogo>
+    <Wrapper>
+      <StyledLogo to="/">logo.</StyledLogo>
 
-      <HamburgerButton animate={{ scale: 1 }} isScrolled={isScrolled} onClick={toggleMenu}>
+      <HamburgerButton onClick={toggleMenu}>
         {isOpen ? (
           <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect x="0.5" y="0.5" width="47" height="47" rx="5.5" stroke="#242635" />
@@ -52,7 +57,36 @@ const Header = () => {
           </svg>
         )}
       </HamburgerButton>
-      <DesktopMenu isScrolled={isScrolled} isOpen={isOpen} />
+      <StyledMenu isOpen={isOpen}>
+        <li
+          onClick={() => {
+            toggleMenu()
+          }}
+        >
+          <a href="#hero"> hero</a>
+        </li>
+        <li
+          onClick={() => {
+            toggleMenu()
+          }}
+        >
+          <a href="#services"> services</a>
+        </li>
+        <li
+          onClick={() => {
+            toggleMenu()
+          }}
+        >
+          <a href="#portfolio"> portfolio</a>
+        </li>
+        <li
+          onClick={() => {
+            toggleMenu()
+          }}
+        >
+          <a href="#contact"> contact</a>
+        </li>
+      </StyledMenu>
     </Wrapper>
   )
 }
