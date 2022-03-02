@@ -1,44 +1,38 @@
 import React, { useEffect, useState } from 'react'
 import { StyledLogo } from '../../atoms/Logo/Logo'
 import { Wrapper, HamburgerButton, StyledMenu } from './Header.styles'
-import scrollTo from 'gatsby-plugin-smoothscroll'
 
 const Header = () => {
   const [isOpen, setISopen] = useState(false)
 
   const toggleMenu = () => {
     setISopen(!isOpen)
-    console.log(isOpen)
   }
-  // const [scrollPosition, setScrollPosition] = useState(0)
-  // const [isScrolled, setIsScrolled] = useState(false)
-  // const [isOpen, setIsOpen] = useState(false)
+  const [scrollPosition, setScrollPosition] = useState(0)
+  const [isScrolled, setIsScrolled] = useState(false)
 
-  // const toggleMenu = () => {
-  //   setIsOpen(!isOpen)
-  //   console.log('ok')
-  // }
-
-  // useEffect(() => {
-  //   window.addEventListener(
-  //     'scroll',
-  //     () => {
-  //       setScrollPosition(window.scrollY)
-  //       if (scrollPosition >= 50) {
-  //         setIsScrolled(true)
-  //       } else {
-  //         setIsScrolled(false)
-  //       }
-  //     },
-  //     true
-  //   )
-  // }, [scrollPosition])
+  useEffect(() => {
+    window.addEventListener(
+      'scroll',
+      () => {
+        setScrollPosition(window.scrollY)
+        if (scrollPosition >= 50) {
+          setIsScrolled(true)
+        } else {
+          setIsScrolled(false)
+        }
+      },
+      true
+    )
+  }, [scrollPosition])
 
   return (
-    <Wrapper>
-      <StyledLogo to="/">logo.</StyledLogo>
+    <Wrapper isScrolled={isScrolled}>
+      <StyledLogo to="/" isScrolled={isScrolled}>
+        logo.
+      </StyledLogo>
 
-      <HamburgerButton onClick={toggleMenu}>
+      <HamburgerButton onClick={toggleMenu} isScrolled={isScrolled}>
         {isOpen ? (
           <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect x="0.5" y="0.5" width="47" height="47" rx="5.5" stroke="#242635" />
