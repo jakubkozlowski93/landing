@@ -1,10 +1,9 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Layout from '../components/Layout/Layout'
 import SocialIcons from '../components/molecules/SocialIcons/SocialIcons'
 import Carousel from '../components/molecules/Carousel/Carousel'
 import { Link } from 'gatsby'
-import { motion } from 'framer-motion'
-import image1 from './../assets/images/realization1.png'
+import image1 from './../assets/images/realization1.jpg'
 import Slider from 'react-slick'
 import {
   Wrapper,
@@ -30,12 +29,6 @@ const data = [
 ]
 
 const Singlepage = () => {
-  const toggleMenu = () => {
-    setIsOpen(!isOpen)
-  }
-
-  const [isOpen, setIsOpen] = useState(true)
-
   const settings = {
     dots: true,
     infinite: true,
@@ -59,19 +52,19 @@ const Singlepage = () => {
             <Carousel2>
               <Slider {...settings}>
                 <div>
-                  <img src="https://source.unsplash.com/random" alt="Photo" />
+                  <img src="https://source.unsplash.com/random" alt="1" />
                 </div>
                 <div>
-                  <img src="https://source.unsplash.com/random" alt="Photo" />
+                  <img src="https://source.unsplash.com/random" alt="2" />
                 </div>
                 <div>
-                  <img src="https://source.unsplash.com/random" alt="Photo" />
+                  <img src="https://source.unsplash.com/random" alt="3" />
                 </div>
                 <div>
-                  <img src="https://source.unsplash.com/random" alt="Photo" />
+                  <img src="https://source.unsplash.com/random" alt="4" />
                 </div>
                 <div>
-                  <img src="https://source.unsplash.com/random" alt="Photo" />
+                  <img src="https://source.unsplash.com/random" alt="5" />
                 </div>
               </Slider>
             </Carousel2>

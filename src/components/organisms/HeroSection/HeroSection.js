@@ -1,6 +1,6 @@
 import React from 'react'
 import { Wrapper, StyledInput, SmallWrapper, DescriptionWrapper, StyledTitle, SmallTitle, SmallDescription, ImgWrapper } from './HeroSection.styles'
-import herophoto from './../../../assets/images/herophoto.png'
+import herophoto from './../../../assets/images/herophoto.jpg'
 
 const HeroSection = () => {
   return (
@@ -22,7 +22,7 @@ const HeroSection = () => {
         <SmallDescription>A style for every story, get the latest style.</SmallDescription>
       </DescriptionWrapper>
       <ImgWrapper>
-        <img src={herophoto} alt="Hero photo" />
+        <img src={herophoto} alt="Hero" />
       </ImgWrapper>
     </Wrapper>
   )
