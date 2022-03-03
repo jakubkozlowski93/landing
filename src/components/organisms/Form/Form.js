@@ -23,7 +23,7 @@ const style = {
 
 const Form = () => {
   return (
-    <Wrapper id="contact" autoComplete={false}>
+    <Wrapper id="contact" autoComplete="off">
       <Bar text="kontakt" />
       <TextField id="name" label="ENTER YOUR NAME*" variant="outlined" sx={{ ...style }} fullWidth />
       <TextField id="email" label="ENTER YOUR EMAIL*" variant="outlined" sx={{ ...style }} fullWidth />
