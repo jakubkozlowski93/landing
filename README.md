@@ -2,12 +2,12 @@
 
 This is a simple landing page.
 <br />
-👉 <a href="https://color-generator-page.netlify.app/" target="_blank" >Look apllication on Netlify:</a>
+👉 <a href="https://loving-elion-b057ac.netlify.app/" target="_blank" >Look apllication on Netlify:</a>
 <br />
 
 ## Follow me
 
-[<img align="left" alt="linked-in" src="https://loving-elion-b057ac.netlify.app/" />](https://www.linkedin.com/in/jakub-koz%C5%82owski-3a8434131/)<br>
+[<img align="left" alt="linked-in" src="https://www.linkedin.com/in/jakub-koz%C5%82owski-3a8434131/" />]<br>
 
 ## Stack
 
